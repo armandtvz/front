@@ -1,0 +1,162 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+{% block body %}
+
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-12">
+                                <div class="spacer-4"></div>
+                                <h2 class="mt-0">Round</h2>
+
+                                <div class="dropup-menu">
+                                        <div id="dropup" class="dropup" aria-hidden="true">
+                                                <button type="button" class="btn secondary">
+                                                        <span class="sr-only">
+                                                                Add
+                                                        </span>
+                                                        Zone
+                                                </button>
+                                                <button type="button" class="btn secondary">
+                                                        <span class="sr-only">
+                                                                Add
+                                                        </span>
+                                                        Line
+                                                </button>
+                                                <button type="button" class="btn secondary">
+                                                        <span class="sr-only">
+                                                                Add
+                                                        </span>
+                                                        Direction
+                                                </button>
+                                        </div>
+                                        <button type="button" class="btn primary" data-open-dropup="dropup">
+                                                Create
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-12">
+
+                                <div class="spacer-4"></div>
+                                <h2 class="mt-0">Normal state</h2>
+                                <button type="button" class="btn primary">Primary button</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn secondary">Secondary</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn clear">Clear</button>
+                                <div class="spacer-1"></div>
+
+                                <input type="submit" name="" class="btn primary">
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn" disabled>Disabled</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn danger">Danger</button>
+                                <input type="submit" name="" value="Danger submit" class="btn danger">
+                                <div class="spacer-1"></div>
+
+                                <a href="#" class="btn primary">Link button</a>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn ghost">Ghost</button>
+
+
+
+
+
+
+                                <div class="spacer-4"></div>
+                                <h2>Loading states</h2>
+                                <button type="button" class="btn primary loading">
+                                        Primary button
+                                        <span class="loader"></span>
+                                </button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn secondary loading">
+                                        Secondary
+                                        <span class="loader"></span>
+                                </button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn clear loading">
+                                        Clear
+                                        <span class="loader"></span>
+                                </button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn loading" disabled>
+                                        Disabled
+                                        <span class="loader"></span>
+                                </button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn danger loading">
+                                        Danger
+                                        <span class="loader"></span>
+                                </button>
+
+
+
+
+                                <div class="spacer-4"></div>
+                                <h2>Success states</h2>
+                                <button type="button" class="btn primary success">Primary button</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn secondary success">Secondary</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn clear success">Clear button</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn success" disabled>Disabled</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn danger success">Danger</button>
+
+
+
+
+
+                                <div class="spacer-4"></div>
+                                <h2>Small buttons</h2>
+                                <button type="button" class="btn primary small">Primary button</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn secondary small">Secondary</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn clear small">Clear</button>
+                                <div class="spacer-1"></div>
+
+                                <input type="submit" name="" class="btn primary small">
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn small" disabled>Disabled</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn danger small">Danger</button>
+                                <div class="spacer-1"></div>
+
+                                <a href="#" class="btn primary small">Link button</a>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn ghost small">Ghost</button>
+
+
+
+
+                                <div class="spacer-3"></div>
+                        </div>
+                </div>
+        </div>
+{% endblock body %}

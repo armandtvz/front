@@ -1,0 +1,277 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="spacer-3"></div>
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-6 offset-xl-2">
+                                <form action="" method="post" novalidate>
+                                        <div class="form-error-alert top">
+                                                Please correct the errors below
+                                        </div>
+
+                                        <label for="first-name">First name</label>
+                                        <input id="first-name" type="text" name="first_name" required>
+
+                                        <label for="cell_number">Cellphone number</label>
+                                        <input id="cell_number" type="tel" name="cell_number" required>
+
+                                        <fieldset class="disabled" disabled>
+                                                <label for="random" class="disabled">Account number</label>
+                                                <input id="random" type="text" name="random" value="allo, allo" disabled>
+                                        </fieldset>
+
+                                        <label for="first-name" class="readonly">Read-only</label>
+                                        <input id="readonly" type="text" name="readonly" value="Allo, allo" readonly>
+
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" name="email" class="invalid-input" aria-describedby="email-input-help" required>
+                                        <ul class="input-help" id="email-input-help">
+                                                <li class="input-help-text">
+                                                        This is just help text.
+                                                </li>
+                                                <li class="input-error">
+                                                        Required field
+                                                </li>
+                                        </ul>
+
+                                        <label for="cars">Cars</label>
+                                        <select id="cars" name="cars">
+                                                <option value=""> -- </option>
+                                                <optgroup label="British cars">
+                                                        <option value="Jaguar">Jaguar</option>
+                                                        <option value="Land Rover">Land Rover</option>
+                                                        <option value="Land Rover">MG</option>
+                                                </optgroup>
+                                                <optgroup label="German cars">
+                                                        <option value="BMW">BMW</option>
+                                                        <option value="VW">VW</option>
+                                                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                                </optgroup>
+                                        </select>
+
+                                        <label for="multiple-select">Multiple select</label>
+                                        <select id="multiple-select" name="multiple_select" size="5" aria-describedby="multiple-select-input-help" multiple>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                        </select>
+                                        <ul class="input-help" id="multiple-select-input-help">
+                                                <li class="input-help-text">
+                                                        Ctrl-click to deselect
+                                                </li>
+                                        </ul>
+
+
+                                        <label class="left-and-right-label" for="textarea-count">
+                                                <span style="">Message (optional)</span>
+                                                <span id="counter"></span>
+                                        </label>
+                                        <textarea id="message" name="message" rows="9" maxlength="500" data-maxlength-counter="counter"></textarea>
+
+
+                                        <fieldset>
+                                                <legend>Preferences</legend>
+                                                <div class="custom-checkbox-wrapper">
+                                                        <input id="newsletter-checkbox" type="checkbox" name="newsletter" aria-describedby="options-fieldset-help" checked>
+                                                        <label for="newsletter-checkbox">Subscribe to newsletter</label>
+                                                </div>
+                                                <div class="custom-checkbox-wrapper">
+                                                        <input id="terms-privacy-checkbox" type="checkbox" name="terms_privacy" aria-describedby="options-fieldset-help">
+                                                        <label for="terms-privacy-checkbox">Agree to terms and privacy policy</label>
+                                                </div>
+                                                <div class="custom-checkbox-wrapper">
+                                                        <input id="disabled-checkbox" type="checkbox" name="terms_privacy" aria-describedby="options-fieldset-help" checked disabled>
+                                                        <label for="disabled-checkbox">You cannot change this</label>
+                                                </div>
+                                                <ul class="input-help" id="options-fieldset-help">
+                                                        <li class="input-help-text">
+                                                                Some more random help text
+                                                        </li>
+                                                </ul>
+                                        </fieldset>
+
+
+                                        <fieldset>
+                                                <legend>Choose your favorite colour</legend>
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-1" type="radio" value="electric_blue" name="radio-1" checked>
+                                                        <label for="radio-1">
+                                                                <span class="dot"></span>
+                                                                <span class="text">Electric blue</span>
+                                                        </label>
+                                                </div>
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-2" type="radio" value="ferrari_red" name="radio-1">
+                                                        <label for="radio-2">
+                                                                <span class="dot"></span>
+                                                                <span class="text">Ferrari red</span>
+                                                        </label>
+                                                </div>
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-3" type="radio" value="red" name="radio-1" disabled>
+                                                        <label for="radio-3">
+                                                                <span class="dot"></span>
+                                                                <span class="text">Green</span>
+                                                        </label>
+                                                </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                                <input type="submit" name="" value="Send message" class="btn primary with-next-icon">
+                                                <button type="button" name="button" class="btn secondary">Cancel</button>
+                                        </fieldset>
+                                </form>
+                        </div>
+
+
+
+
+
+                        <div class="spacer-5"></div>
+
+
+
+
+
+                        <div class="col-xl-6 offset-xl-2">
+                                <form class="small-form" action="" method="post" id="front-form-1">
+                                        <div class="form-error-alert top">
+                                                Please correct the errors below
+                                        </div>
+
+                                        <label for="">First name</label>
+                                        <input type="text" name="" value="Armandt" required>
+
+                                        <label for="">Last name</label>
+                                        <input type="text" name="" value="van Zyl" required>
+
+                                        <label for="">Email</label>
+                                        <input type="email" name="" value="" placeholder="" required>
+
+                                        <label for="">Country</label>
+                                        <select class="invalid-input" name="" id="country" aria-describedby="country_select_input_help">
+                                                <option value=""> -- </option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="Neverland">Neverland</option>
+                                        </select>
+                                        <ul class="input-help" id="country_select_input_help">
+                                                <li class="input-help-text">
+                                                        Your password must be 8-20 characters long, contain letters and numbers.
+                                                </li>
+                                                <li class="input-error">
+                                                        Required field
+                                                </li>
+                                        </ul>
+
+                                        <label for="">Multiple select</label>
+                                        <select multiple size="5">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                        </select>
+
+                                        <label for="">Email</label>
+                                        <input type="email"
+                                               name=""
+                                               value=""
+                                               id="email"
+                                               class="invalid-input"
+                                               required>
+
+                                        <ul class="input-help">
+                                                <li class="input-error">
+                                                        Required field
+                                                </li>
+                                        </ul>
+
+
+
+
+                                        <label class="left-and-right-label" for="textarea-count-small-form">
+                                                <span style="">Message (optional)</span>
+                                                <span id="counter-small-form"></span>
+                                        </label>
+                                        <textarea name="name" rows="9" class="textarea" maxlength="500" id="textarea-count-small-form" data-maxlength-counter="counter-small-form"></textarea>
+
+                                        <div class="custom-checkbox-wrapper">
+                                                <input id="checkbox-small-form" type="checkbox" value="new" name="checkbox" checked>
+                                                <label for="checkbox-small-form">Agree to terms and privacy policy</label>
+                                        </div>
+
+                                        <fieldset>
+                                                <legend>Choose your favorite colour</legend>
+                                                <div class="custom-radio-button-group  custom-radio-button-group--vertical">
+                                                        <div class="custom-radio-button-wrapper">
+                                                                <input id="radio-1" type="radio" value="red" name="radio-1" checked>
+                                                                <label for="radio-1">
+                                                                        <span class="dot"></span>
+                                                                        <span class="text">Electric blue</span>
+                                                                </label>
+                                                        </div>
+                                                        <div class="custom-radio-button-wrapper">
+                                                                <input id="radio-2" type="radio" value="red" name="radio-1">
+                                                                <label for="radio-2">
+                                                                        <span class="dot"></span>
+                                                                        <span class="text">Red</span>
+                                                                </label>
+                                                        </div>
+                                                        <div class="custom-radio-button-wrapper">
+                                                                <input id="radio-3" type="radio" value="red" name="radio-1" disabled>
+                                                                <label for="radio-3">
+                                                                        <span class="dot"></span>
+                                                                        <span class="text">Green</span>
+                                                                </label>
+                                                        </div>
+                                                </div>
+                                        </fieldset>
+
+                                        <div class="form-error-alert left">
+                                                Please correct the errors above
+                                        </div>
+
+                                        <fieldset>
+                                                <button type="button" name="button" class="btn secondary">Cancel</button>
+                                                <input type="submit" name="" value="Send message" class="btn primary with-next-icon">
+                                        </fieldset>
+                                </form>
+                        </div>
+
+
+
+
+                        <div class="spacer-5"></div>
+
+
+
+
+                        <div class="col-xl-6 offset-xl-2">
+                                <form action="" method="post" novalidate>
+                                        <div class="input-container">
+                                                <label for="addon">Inline form group with addon</label>
+                                                <span class="inline-form-group">
+                                                        <input id="addon" type="email" name="addon" required>
+                                                        <span class="input-addon">@example.com</span>
+                                                </span>
+                                        </div>
+                                        <div class="input-container">
+                                                <label for="percent_addon">Inline form group with percentage addon</label>
+                                                <span class="inline-form-group">
+                                                        <input id="percent_addon" type="email" name="percent_addon" required>
+                                                        <span class="input-addon percentage-addon">%</span>
+                                                </span>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+        <div class="spacer-5"></div>
+{% endblock body %}

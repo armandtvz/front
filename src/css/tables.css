@@ -1,0 +1,73 @@
+/* Tables
+------------------------------------------------------------------------------*/
+
+/* Example of right alignment for a specific column */
+/*
+
+tr td:nth-child(4),
+tr th:nth-child(4)
+{
+    text-align: right;
+    padding: 10px 10px 10px 40px;
+}
+
+*/
+
+table {
+    font-variant-numeric: lining-nums tabular-nums;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.table-wrapper {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100vw;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+th {
+    font-weight: bold;
+    padding: 12px 10px;
+}
+
+tr {
+    border-top: 0.5px solid var(--color-table-line-borders);
+}
+
+tr:first-child {
+    border-top: 0;
+}
+
+tr:last-child {
+    border-bottom: 0.5px solid var(--color-table-line-borders);
+}
+
+thead > tr {
+    border: 0 !important;
+}
+
+td {
+    padding: 10px 40px 10px 10px;
+    line-height: normal;
+}
+
+tr:nth-child(2n) {
+    background-color: var(--bg-color);
+}
+
+th, td {
+    text-align: left;
+}
+
+thead, th {
+    background-color: var(--bg-navbar);
+}
+
+tr:hover {
+    background-color: var(--bg-navbar);
+}

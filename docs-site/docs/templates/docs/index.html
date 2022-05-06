@@ -1,0 +1,83 @@
+{% extends 'docs/base.html' %}
+
+
+
+
+{% block body %}
+<div class="col-xl-6 offset-xl-2">
+        <h2>Components</h2>
+        <ul>
+                <li>
+                        <a href="{% url 'docs:template' %}">HTML template</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:typography' %}">Typography</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:forms' %}">Forms</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:buttons' %}">Buttons</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:colors' %}">Colors</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:tables' %}">Tables</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:code' %}">Code snippets</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:collapse' %}">Collapsibles</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:modal' %}">Modal</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:toast' %}">Toast</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:tasks' %}">Tasks</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:dots' %}">Dots</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:chips' %}">Chips</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:pagination' %}">Pagination</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:breadcrumbs' %}">Breadcrumbs</a>
+                </li>
+        </ul>
+
+        <h3>Navigation</h3>
+        <ul>
+                <li>
+                        <a href="{% url 'docs:navbar_x' %}">Navbar - horizontal</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:navbar_y' %}">Navbar - vertical</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:sidenav' %}">Sidenav</a>
+                </li>
+        </ul>
+
+        <h3>Utils</h3>
+        <ul>
+                <li>
+                        <a href="{% url 'docs:loader' %}">Loader</a>
+                </li>
+                <li>
+                        <a href="examples/sidenav.html">Spacing</a>
+                </li>
+                <li>
+                        <a href="{% url 'docs:icons' %}">Icons</a>
+                </li>
+        </ul>
+</div>
+{% endblock body %}

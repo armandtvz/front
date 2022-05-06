@@ -1,0 +1,49 @@
+/* Resets the base typography.css for the current media query */
+
+
+:root {
+    --font-size: 17px;
+    --quote-indent: 10px;
+}
+
+article.story.centered img {
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.display-1 {
+    font-size: 70px;
+}
+
+.display-2 {
+    font-size: 60px;
+}
+
+.display-3 {
+    font-size: 50px;
+}
+
+.display-4 {
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+blockquote.pull-quote p {
+    font-size: 30px;
+}
+
+blockquote.pull-quote cite {
+    font-size: 20px;
+}

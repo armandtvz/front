@@ -1,0 +1,125 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+{% block body %}
+        <div class="container">
+                <h2>
+                        With icons
+                </h2>
+                <nav aria-label="pagination" id="paginator">
+                        <ol class="pagination with-icons">
+                                <li class="first">
+                                        <a href="#">
+                                                <span class="sr-only">First</span>
+                                        </a>
+                                </li>
+                                <li class="previous disabled">
+                                        <span class="paginate-label">
+                                                <span class="sr-only">Previous</span>
+                                        </span>
+                                </li>
+                                <li class="current active">
+                                        <span>
+                                                Page 1 of 10
+                                                <span class="sr-only">(current)</span>
+                                        </span>
+                                </li>
+                                <li class="next">
+                                        <a href="#">
+                                                <span class="sr-only">Next</span>
+                                        </a>
+                                </li>
+                                <li class="last">
+                                        <a href="#">
+                                                <span class="sr-only">Last</span>
+                                        </a>
+                                </li>
+                        </ol>
+                        <form id="pagination-form" action="" method="get" autocomplete="off">
+                                <label for="" class="display: block;">Go to page</label>
+                                <span class="inline-form-group">
+                                        <input type="number" name="page" value="" min="1" max="10" placeholder="Page 1-10">
+                                        <input type="submit" name="" value="Go" class="btn primary small">
+                                </span>
+                        </form>
+                </nav>
+                <div class="spacer-2"></div>
+                <h2>
+                        No icons
+                </h2>
+                <nav aria-label="pagination" id="paginator">
+                        <ol class="pagination">
+                                <li class="first">
+                                        <a href="#">
+                                                First
+                                        </a>
+                                </li>
+                                <li class="previous disabled">
+                                        <span class="paginate-label">
+                                                Previous
+                                        </span>
+                                </li>
+                                <li class="current active">
+                                        <span>
+                                                Page 1 of 10
+                                                <span class="sr-only">(current)</span>
+                                        </span>
+                                </li>
+                                <li class="next">
+                                        <a href="#">
+                                                Next
+                                        </a>
+                                </li>
+                                <li class="last">
+                                        <a href="#">
+                                                Last
+                                        </a>
+                                </li>
+                        </ol>
+                </nav>
+                <div class="spacer-2"></div>
+                <h2>
+                        Built-in form
+                </h2>
+                <nav aria-label="pagination" id="paginator">
+                        <ol class="pagination with-icons">
+                                <li class="first">
+                                        <a href="#">
+                                                <span class="sr-only">First</span>
+                                        </a>
+                                </li>
+                                <li class="previous disabled">
+                                        <span class="paginate-label">
+                                                <span class="sr-only">Previous</span>
+                                        </span>
+                                </li>
+                                <li class="current active">
+                                        <span>
+                                                Page 1 of 10
+                                                <span class="sr-only">(current)</span>
+                                        </span>
+                                </li>
+                                <li class="next">
+                                        <a href="#">
+                                                <span class="sr-only">Next</span>
+                                        </a>
+                                </li>
+                                <li class="last">
+                                        <a href="#">
+                                                <span class="sr-only">Last</span>
+                                        </a>
+                                </li>
+                                <li class="">
+                                        <form id="pagination-form" action="" method="get" autocomplete="off">
+                                                <label for="goto-page" class="sr-only">Go to page</label>
+                                                <span class="inline-form-group">
+                                                        <input type="number" name="page" value="" min="1" max="10" placeholder="Page 1-10" class="goto-page">
+                                                        <input type="submit" name="" value="Go" id="goto-page" class="btn primary small">
+                                                </span>
+                                        </form>
+                                </li>
+                        </ol>
+                </nav>
+        </div>
+{% endblock body %}

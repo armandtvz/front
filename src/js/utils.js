@@ -1,0 +1,53 @@
+const front_utils = function()
+{
+    'use strict';
+
+
+    function string_to_html(str)
+    {
+    	var dom = document.createElement('div');
+    	dom.innerHTML = str;
+        const element = dom.firstChild;
+        return element;
+    }
+
+
+
+
+    function get_closest_parent(elem, selector)
+    {
+        // From here: https://gomakethings.com/how-to-get-the-closest-parent-element-with-a-matching-selector-using-vanilla-javascript/
+    	// Element.matches() polyfill
+    	if (!Element.prototype.matches)
+        {
+    	    Element.prototype.matches =
+    	        Element.prototype.matchesSelector ||
+    	        Element.prototype.mozMatchesSelector ||
+    	        Element.prototype.msMatchesSelector ||
+    	        Element.prototype.oMatchesSelector ||
+    	        Element.prototype.webkitMatchesSelector ||
+    	        function(s)
+                {
+    	            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+    	                i = matches.length;
+    	            while (--i >= 0 && matches.item(i) !== this) {}
+    	            return i > -1;
+    	        };
+    	}
+
+    	// Get the closest matching element
+    	for ( ; elem && elem !== document; elem = elem.parentNode )
+        {
+    		if ( elem.matches( selector ) ) return elem;
+    	}
+    	return null;
+    };
+
+
+
+
+    return {
+        string_to_html: string_to_html,
+        get_closest_parent: get_closest_parent,
+    }
+}();

@@ -1,0 +1,25 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+{% block body %}
+<button type="button" name="button" id="open-modal">Open modal</button>
+
+<div class="modal" id="modal-confirm-file-drawer-close" role="dialog">
+        <div class="modal-inner">
+                <span>Are you sure?</span>
+                <div class="break"></div>
+                <button type="button" name="button" class="btn primary">Yes</button>
+                <button type="button" name="button" class="btn secondary">No</button>
+        </div>
+</div>
+{% endblock body %}
+
+{% block extrajs %}
+<script>
+    const confirm_close_modal = document.getElementById('modal-confirm-file-drawer-close');
+    const open_modal_btn = document.getElementById('open-modal');
+    open_modal_btn.addEventListener('click', () => {
+        modal.open(confirm_close_modal);
+    });
+</script>
+{% endblock extrajs %}

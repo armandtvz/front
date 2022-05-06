@@ -1,0 +1,103 @@
+:root,
+.light-theme
+{
+    /* dark and light */
+    --color-dark: #1a1d20;
+    --color-light: #f8f9fa;
+
+    /* grays */
+    --color-gray: #e6e6e6;
+    --color-gray-dark: #c6c6c6;
+    --color-gray-darker: #a9a9a9;
+
+    /* primary */
+    --color-primary: #0f62fe;
+    --color-primary-dark: #014cd9;
+    --color-primary-darker: #002d9c;
+
+    /* secondary */
+    --color-secondary: #343a40;
+    --color-secondary-dark: #4b545c;
+    --color-secondary-darker: #1d2124;
+
+    /* danger */
+    /* --color-danger: #ad1820;
+    --color-danger-dark: #ad1820;
+    --color-danger-darker: #801218; */
+    --color-danger: #dc3545;
+    --color-danger-dark: #b00020;
+    --color-danger-darker: #bd2130;
+
+    /* states */
+    --color-success: #28a745;
+    --color-error: #9c1421;
+    --color-warning: yellow;
+
+    /* text */
+    --text-color: var(--color-dark);
+    --text-color-inverse: var(--color-light);
+    --color-text-muted: #484e53;
+    --link-color: var(--text-color);
+    --link-visited: var(--text-color);
+
+    /* backgrounds */
+    --bg-color: #ffffff;
+    --bg-input: #ffffff;
+    --bg-error: var(--color-error);
+    --bg-code: var(--bg-navbar);
+    --bg-navbar: var(--color-light);
+    --bg-inverse: #161616;
+    --bg-nav-btn-hover: var(--color-light);
+    --bg-link-focus: yellow;
+
+    /* forms */
+    --shadow-opacity: 0.5;
+    --input-border: #ced4da;
+    --color-focus-shadow: rgba(15, 98, 254, var(--shadow-opacity));
+    --color-error-shadow: rgba(156, 20, 33, var(--shadow-opacity));
+    --color-focus: #0f62fe;
+    --color-focus-checkbox: var(--color-dark);
+    --color-disabled: #c6c6c6;
+
+    /* tables */
+    --color-table-line-borders: #e0e0e0;
+}
+
+
+
+
+.dark-theme {
+    /* dark and light */
+    --color-light: #e0e0e0;
+    --color-secondary: rgb(86, 96, 106);
+
+    --color-danger: #b00020;
+    --color-danger-dark: #b00020;
+
+    /* backgrounds */
+    --bg-color: #121212;
+    --bg-inverse: var(--color-light);
+    --bg-error: var(--bg-input);
+    --bg-navbar: #1f1f1f;
+    --bg-code: var(--bg-navbar);
+    --bg-nav-btn-hover: var(--color-gray);
+    --bg-input: var(--bg-navbar);
+    --bg-link-focus: #4d4d4d;
+
+    /* text */
+    --text-color: var(--color-light);
+    --text-color-inverse: var(--color-dark);
+    --link-color: var(--text-color);
+    --link-visited: var(--text-color);
+
+    /* forms */
+    --input-border: #3d3d3d;
+    --color-focus: #f8f9fa;
+    --color-focus-checkbox: var(--color-light);
+    --color-focus-shadow: rgb(248, 249, 250, var(--shadow-opacity));
+    --color-disabled: #585858;
+
+    /* tables */
+    --color-table-line-borders: #383838;
+    --color-table-odds: var(--bg-color);
+}

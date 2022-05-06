@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+
+
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Front front end framework">
+        <title>Front front end framework</title>
+
+        <script type="text/javascript">
+                document.querySelector('html').classList.remove('no-js');
+                document.querySelector('html').classList.add('js');
+        </script>
+
+
+        <!-- Critical CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+        <link rel="stylesheet" href="{% static 'css/colors.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+        <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/sidenav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/breadcrumbs.css' %}">
+        <link rel="stylesheet" href="{% static 'css/collapse.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pagination.css' %}">
+        <link rel="stylesheet" href="{% static 'css/img.css' %}">
+
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+        <!-- Other CSS -->
+        <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+        <link rel="stylesheet" href="{% static 'css/code.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+        <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+        <link rel="stylesheet" href="{% static 'css/toast.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tasks.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dots.css' %}">
+        <link rel="stylesheet" href="{% static 'css/chips.css' %}">
+
+
+        <!-- Typography -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/typography-base.css' %}" media="all">
+        <link rel="stylesheet" href="{% static 'css/typography-xl.css' %}" media="screen and (max-width: 1600px)">
+        <link rel="stylesheet" href="{% static 'css/typography-lg.css' %}" media="screen and (max-width: 1200px)">
+        <link rel="stylesheet" href="{% static 'css/typography-md.css' %}" media="screen and (max-width: 992px)">
+        <link rel="stylesheet" href="{% static 'css/typography-sm.css' %}" media="screen and (max-width: 768px)">
+
+        <link rel="stylesheet" href="{% static 'css/typography-xs.css' %}" media="screen and (max-width: 576px)">
+        <link rel="stylesheet" href="{% static 'css/typography-xs.css' %}" media="screen and (max-width: 768px) and (orientation: landscape)">
+
+        <link rel="stylesheet" href="{% static 'css/typography-print.css' %}" media="print">
+
+        <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
+
+        <style media="screen">
+            #dark-light-toggle {
+                position: absolute;
+                top: 100px;
+                right: 10px;
+            }
+
+            html {
+                -webkit-tap-highlight-color: transparent;
+            }
+        </style>
+
+        <noscript>
+
+        </noscript>
+
+
+        {% block head %}
+        {% endblock head %}
+</head>
+
+
+
+
+<body>
+        <a class="sr-only" href="#main">Skip to main content</a>
+
+        <button type="button" name="button" id="dark-light-toggle" class="btn clear small">Dark</button>
+
+        {% if request.path != '/docs/' %}
+                <div class="mt-2 mb-2">
+                        <a href="{% url 'docs:index' %}">Back to index</a>
+                </div>
+        {% endif %}
+
+        {% block body %}
+        {% endblock body %}
+
+        <script src="{% static 'js/utils.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/forms.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/colors.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/sidenav.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/collapse.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/buttons.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/modal.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/toast.js' %}" charset="utf-8"></script>
+
+        {% block extrajs %}
+        {% endblock extrajs %}
+</body>
+
+
+
+
+</html>

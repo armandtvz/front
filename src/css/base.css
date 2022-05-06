@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+main:focus {
+    outline: none;
+}
+
+
+@media (prefers-reduced-motion) {
+    * {
+        transition: 1ms !important;
+    }
+}

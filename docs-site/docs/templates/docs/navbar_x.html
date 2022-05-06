@@ -1,0 +1,109 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+{% block body %}
+        <nav class="navbar x fixed" aria-label="main">
+                <ul>
+                        <li class="logo" style="margin-right: auto;">
+                                <a href="#">Logo</a>
+                        </li>
+                        <li class="show-on-768" id="open-btn-wrapper">
+                                <button id="open-btn" aria-label="open site navigation" data-open-sidenav="main-nav">Menu</button>
+                        </li>
+                </ul>
+                <!-- NOTE:
+                     This is the element that will be used as a sidenav hence
+                     the data-resp-nav and aria-hidden attributes.
+                     Currently aria-hidden is false because it is a regular
+                     navbar until it is used as a sidenav on smaller viewports.
+                -->
+                <ul id="main-nav" class="nav-body left" aria-hidden="false" data-resp-nav="768">
+                        <li class="show-on-768" id="close-btn-wrapper">
+                                <button id="close-btn" data-close-sidenav="main-nav">Close</button>
+                        </li>
+                        <li>
+                                <a href="#">Home</a>
+                        </li>
+                        <li>
+                                <a href="#" class="selected">Selected</a>
+                        </li>
+                        <li>
+                                <a href="#">About</a>
+                        </li>
+                        <li>
+                                <a href="#">Contact</a>
+                        </li>
+                        <li>
+                                <a href="#">Work</a>
+                        </li>
+                        <li>
+                                <a href="#">Studio</a>
+                        </li>
+                        <li>
+                                <button>Button</button>
+                        </li>
+                </ul>
+        </nav>
+        <!-- <nav class="navbar x fixed" aria-label="main">
+                <ul>
+                        <li class="logo" style="margin-right: auto;">
+                                <a href="#">Logo</a>
+                        </li>
+                        <li>
+                                <a href="#" class="selected">Selected</a>
+                        </li>
+                        <li>
+                                <a href="#">Link</a>
+                        </li>
+                        <li>
+                                <a href="#">Link</a>
+                        </li>
+                        <li>
+                                <a href="#">Link</a>
+                        </li>
+                        <li>
+                                <a href="#">Link</a>
+                        </li>
+                        <li>
+                                <button>Button</button>
+                        </li>
+
+
+
+                        <li class="show-on-768">
+                                <button id="open-btn" data-open-sidenav="navbar-y">Menu</button>
+                        </li>
+                </ul>
+        </nav> -->
+
+
+
+
+
+
+
+
+        <!-- <article class="story pt-2 pb-10">
+                <h1 class="mt-10">Heading</h1>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor aliquet magna vel mollis. Duis ac sodales turpis, non ornare libero. Quisque urna mi, facilisis nec orci vulputate, tempus lacinia eros. Etiam ullamcorper, neque vitae ullamcorper dictum, est purus ullamcorper augue, quis scelerisque nunc tortor et nisi. Integer et laoreet nunc. Nam ut rhoncus odio. Vestibulum eleifend dolor sed quam hendrerit, et volutpat mi consequat. Curabitur porttitor risus justo, vitae dictum ligula ullamcorper vitae. Praesent viverra elit eu nunc aliquet malesuada nec eu quam. Integer tempor faucibus metus sed viverra. Nulla dignissim, sapien vitae condimentum molestie, mauris massa laoreet orci, et rhoncus sapien mauris sit amet ante. Morbi vulputate lobortis velit, at bibendum lorem suscipit ut.
+                </p>
+                <p>
+                        Nullam commodo elementum sapien. Aliquam id lacus velit. Morbi sit amet tristique ex, at tincidunt sapien. Aenean pretium dui eget sem tristique interdum. Nulla varius, velit vel dignissim pretium, velit enim semper nisl, vel viverra mi nisi quis tortor. Sed posuere neque dolor. Aliquam erat volutpat. Nullam gravida tincidunt nunc. Mauris venenatis, ligula at blandit pretium, tortor sem imperdiet dolor, vel tincidunt justo augue et massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed lobortis augue. Nullam fermentum faucibus egestas. Vestibulum tempus nulla risus, pretium maximus tortor placerat nec. Duis eu mi id erat rutrum facilisis. Vestibulum vestibulum vestibulum sagittis.
+                </p>
+                <p>
+                        Curabitur libero metus, luctus sit amet posuere a, dictum laoreet augue. Sed sed consequat purus, at laoreet dolor. Vivamus arcu neque, faucibus sit amet nisl in, gravida ornare nulla. Nunc in sapien aliquet, molestie mauris non, facilisis turpis. Praesent lobortis posuere libero, in tempor ex suscipit nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse eleifend laoreet lectus ac posuere. Aliquam et feugiat purus. Etiam nec magna augue. Mauris aliquet libero at rhoncus volutpat. Praesent ac lacinia turpis. Nullam in metus vitae tellus accumsan elementum. Nulla id turpis est. Vivamus posuere viverra arcu convallis viverra. Suspendisse luctus diam nisl, a facilisis odio dignissim et. Sed enim arcu, rhoncus tempus iaculis eu, porttitor vel ex.
+                </p>
+                <p>
+                        Suspendisse semper nulla vitae nibh imperdiet malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec in est a turpis pellentesque tristique vitae eget sem. Nullam elementum libero quis risus hendrerit, at consectetur purus facilisis. Sed non eros placerat, placerat nulla vel, vestibulum arcu. Nullam euismod ultricies diam, eget eleifend tortor accumsan nec. Vestibulum lobortis nunc leo, sit amet porta justo mollis venenatis. Donec scelerisque urna sit amet lorem consequat, at rutrum nisi scelerisque. Suspendisse tristique, ante sed hendrerit iaculis, magna ligula mollis odio, sed molestie libero risus ut dui. In ullamcorper sollicitudin lorem. Aliquam erat volutpat. Vestibulum condimentum tellus ut quam placerat blandit. Nullam eu consequat lectus, sed laoreet metus. Mauris erat lacus, auctor a tortor quis, feugiat facilisis lorem. Sed consequat varius ligula ac ultrices. Aliquam quis tincidunt turpis, tempor auctor risus.
+                </p>
+                <p>
+                        Fusce sollicitudin ullamcorper diam, sed condimentum mauris. Sed aliquet est consequat neque eleifend, eu scelerisque leo consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In at nunc magna. Fusce consequat dolor id feugiat pulvinar. Nulla vehicula suscipit dignissim. Vivamus tempor, tellus tempor tincidunt iaculis, lorem felis sollicitudin ipsum, lacinia pulvinar elit eros eget purus. Suspendisse vitae purus elementum, suscipit ex at, sodales odio. In libero massa, sodales et pharetra in, varius eu orci. Sed et consequat ligula, in faucibus nibh. Praesent in tempus ex. Integer auctor neque vestibulum nisi tempus dignissim. Nunc eleifend quam et hendrerit tincidunt. Quisque quis ullamcorper elit.
+                </p>
+        </article> -->
+
+
+
+
+
+{% endblock body %}

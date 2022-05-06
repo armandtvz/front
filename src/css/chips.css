@@ -1,0 +1,33 @@
+.chip {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 9999em;
+    height: 1.5rem;
+    line-height: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background: rgb(245, 248, 250);
+    border: 1px solid rgb(197, 206, 214);
+    color: rgb(57, 68, 77);
+
+    font-size: calc(var(--font-size) - 3px);
+}
+
+.chip .dot::before {
+    margin-right: 2px;
+}
+
+.dark-theme .chip {
+    background: #383838;
+    color: var(--text-color);
+    border-width: 2px;
+}
+
+.chip.online {
+}
+
+.chip.offline {
+}

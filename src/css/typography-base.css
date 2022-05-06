@@ -1,0 +1,487 @@
+/*
+    It is very important to remember that good typography cannot be calculated
+    via a golden ratio, or any other ratio for that matter, and it can't be made
+    generic. This is a starting place and needs to be overrided.
+*/
+
+:root {
+    --primary-font-family: 'Inter';
+    --font-family: var(--primary-font-family),
+        -apple-system, BlinkMacSystemFont,
+        Arial, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+        "Helvetica Neue", sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    --headings-font-family: var(--primary-font-family),
+        -apple-system, BlinkMacSystemFont,
+        Arial, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+        "Helvetica Neue", sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+
+    --font-weight-default: 400;
+    --font-size: 16.5px;
+    --space-around-p: calc(var(--font-size) + 2px);
+    --line-height: 1.6;
+
+    --list-indent: 20px;
+    --quote-indent: var(--list-indent);
+}
+
+
+
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+
+    /* TODO REVIEW */
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    white-space: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Headings
+----------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings-font-family);
+    color: inherit;
+}
+
+.display-1 {
+    font-size: 90px;
+    font-weight: 500;
+    margin-top: 170px;
+    margin-bottom: 120px;
+    line-height: 0.98;
+    letter-spacing: -3.6px;
+}
+
+.display-2 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    letter-spacing: -1.8px;
+    line-height: 1.05;
+}
+
+.display-3 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 130px;
+    margin-bottom: 80px;
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+}
+
+.display-4 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 110px;
+    margin-bottom: 60px;
+    letter-spacing: -0.2px;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-top: 140px;
+    margin-bottom: 23px;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+
+    margin-top: 32px;
+    font-size: 33px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 85px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 67px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: 0px;
+
+    font-size: 20px;
+}
+
+h4, h5, h6 {
+    /* Use these headings for page structure and semantics,
+       but don't keep lowering font-size.
+       font-size for headings must not be smaller than body text. */
+    font-size: calc(var(--font-size) + 3px);
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    line-height: 1.35;
+
+    font-size: 17px;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Block-level type
+----------------------------------------------------------------------------- */
+p, ul, ol
+{
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-default);
+    margin-top: var(--space-around-p);
+    margin-bottom: var(--space-around-p);
+}
+
+ul, ol
+{
+    padding-left: var(--list-indent);
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol
+{
+    margin-bottom: var(--space-around-p);
+}
+
+blockquote {
+    /*
+    Remember:
+    - That blockquotes contain p tags.
+    - That blockquotes are not pull quotes and are usually used
+    for large blocks of text.
+    */
+    line-height: calc(var(--line-height) - 0.07);
+    margin-top: var(--space-around-p);
+    margin-bottom: var(--space-around-p);
+    padding-left: var(--quote-indent);
+}
+
+blockquote cite {
+    font-style: italic;
+}
+
+blockquote.pull-quote {
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+    padding-right: 2vw;
+}
+
+blockquote.pull-quote p {
+    font-size: 37px;
+    line-height: 1.3;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+blockquote.pull-quote cite {
+    font-size: 28px;
+    line-height: 1.3;
+    text-align: left;
+    display: block;
+    margin-bottom: var(--space-around-p);
+}
+
+small {
+    font-weight: normal;
+    font-style: normal;
+    /* TODO REVIEW Can't we just say `font-size: 82%`? */
+    font-size: calc(var(--font-size) * 0.82);
+}
+
+figcaption {
+    font-style: normal;
+    font-size: calc(var(--font-size) * 0.82);
+}
+
+img + figcaption {
+    margin-top: 11px;
+    margin-bottom: 32px;
+}
+
+.lead {
+    /* TODO REVIEW */
+    font-style: normal;
+    font-size: 28px;
+    margin-top: calc(var(--space-around-p) + 24px);
+    margin-bottom: calc(var(--space-around-p) + 50px);
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inline type
+----------------------------------------------------------------------------- */
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: var(--link-color);
+
+    /* Google color TODO REVIEW */
+    /* color: #1A0DAB; */
+}
+
+a:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: 1px;
+    background-color: var(--bg-link-focus);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    /* text-decoration: underline; */
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a.unstyled {
+    text-decoration: none;
+    background-color: none;
+    transition: 0;
+}
+
+a.unstyled:hover {
+    text-decoration: none;
+    background-color: none;
+    transition: 0;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Text utils
+----------------------------------------------------------------------------- */
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Articles
+----------------------------------------------------------------------------- */
+:root {
+    --story-width: 670px;
+}
+
+article p,
+article ul,
+article ol
+{
+    --font-size: 19.5px;
+}
+
+article.story {
+    font-family: 'PT Serif', 'Times New Roman', serif;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* width: 100vw; */
+    width: 100%;
+}
+
+article.story li {
+    margin-top: var(--space-around-p);
+    margin-bottom: var(--space-around-p);
+}
+
+article.story ul.no-li-margin li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+article.story.centered > * {
+    /* TODO REVIEW */
+    max-width: var(--story-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article.story.centered {
+    transform: translateX(-5vw);
+}
+
+article.story img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+article.story.centered img,
+article.story.centered figure
+{
+    /* TODO REVIEW */
+    /* width: var(--story-width); */
+    width: 50vw;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+article:focus {
+    outline: none;
+}
+
+article.story section:after {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    font-size: 50px;
+    content: "\2042"; /* Asterism */
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: normal;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    h4, h5, h6 {
+        font-size: 15px;
+    }
+}
