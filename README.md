@@ -24,12 +24,18 @@ The Bootstrap grid is used (Bootstrap 5).
 
 ## Quickstart
 
-1. Copy the files from the `dist` directory.
+1. Copy the files from the `dist` directory. Or use jsDelivr:
+   ```html
+   https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front.min.css
+   https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front_head.min.js
+   https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front_body.min.js   
+   https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front.min.js
+   ```
 
 1. Add `front.min.css` to the `<head>` tag before your other styles.
    ```html
    <head>
-           <link rel="stylesheet" href="front.min.css">
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front.min.css">
 
            <!-- ... -->
    </head>
@@ -46,7 +52,7 @@ The Bootstrap grid is used (Bootstrap 5).
    <head>
            <!-- ... -->
 
-           <script src="front_head.min.js" charset="utf-8"></script>
+           <script src="https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front_head.min.js" charset="utf-8"></script>
    </head>
    ```
 
@@ -66,8 +72,22 @@ The Bootstrap grid is used (Bootstrap 5).
    /* CSS class used for dark theme */
    .dark-theme {}
    ```
+   ```html
+   <body>
+           <script src="https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front_body.min.js" charset="utf-8"></script>
+
+           <!-- ... -->
+   </body>
+   ```
 
 1. Add `front.min.js` before the closing `<body>` tag for all other scripts.
+   ```html
+   <body>
+           <script src="https://cdn.jsdelivr.net/gh/armandtvz/front@1.0.x/dist/front.min.js" charset="utf-8"></script>
+
+           <!-- ... -->
+   </body>
+   ```
 
 
 
