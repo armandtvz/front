@@ -9,10 +9,9 @@
     line-height: 0;
     font-size: 0.9rem;
     font-weight: 400;
-    background: rgb(245, 248, 250);
-    border: 1px solid rgb(197, 206, 214);
+    background: #f5f8fa;
+    border: 1px solid #c5ced6;
     color: rgb(57, 68, 77);
-
     font-size: calc(var(--font-size) - 3px);
 }
 
@@ -26,8 +25,10 @@
     border-width: 2px;
 }
 
-.chip.online {
-}
+.chip.online {}
 
-.chip.offline {
+.chip.offline {}
+
+.chip:hover {
+    background-color: var(--bg-color-darker);
 }
