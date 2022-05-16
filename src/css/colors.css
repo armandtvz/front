@@ -48,7 +48,7 @@
     --bg-navbar: var(--color-light);
     --bg-inverse: #161616;
     --bg-nav-btn-hover: var(--color-light);
-    --bg-link-focus: yellow;
+    --bg-link-focus: var(--bg-color);
 
     /* forms */
     --shadow-opacity: 0.5;
