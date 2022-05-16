@@ -42,6 +42,7 @@
 
     /* backgrounds */
     --bg-color: #ffffff;
+    --bg-color-darker: #e6e6e6;
     --bg-input: #ffffff;
     --bg-error: var(--color-error);
     --bg-code: var(--bg-navbar);
@@ -76,6 +77,7 @@
 
     /* backgrounds */
     --bg-color: #121212;
+    --bg-color-darker: #000;
     --bg-inverse: var(--color-light);
     --bg-error: var(--bg-input);
     --bg-navbar: #1f1f1f;
