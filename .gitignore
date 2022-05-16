@@ -276,3 +276,4 @@ cython_debug/
 /ignore
 gitignore/
 secret/
+package-lock.json
