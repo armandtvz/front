@@ -3,11 +3,16 @@ const front_utils = function()
     'use strict';
 
 
+    /**
+     * Converts a string into an HTMLElement.
+     * @param {string} str - The string to convert.
+     * @returns {HTMLElement}
+     */
     function string_to_html(str)
     {
-    	var dom = document.createElement('div');
-    	dom.innerHTML = str;
-        const element = dom.firstChild;
+    	const div = document.createElement('div');
+    	div.innerHTML = str;
+        const element = div.firstElementChild;
         return element;
     }
 
