@@ -2,6 +2,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
     --space-above-form-control: 28px;
+    --space-above-checkbox: 21px;
     --input-border-radius: 0;
     --label-font-weight: 500;
 }
@@ -111,6 +112,7 @@ input[type="radio"] + label {
 
 input[type="checkbox"] + label {
     display: inline-flex;
+    margin-top: var(--space-above-checkbox);
     margin-bottom: 0;
     font-weight: 400;
 }
