@@ -1,7 +1,5 @@
 :root {
     --btn-transition-time: 150ms;
-    --btn-padding: 16px 70px 15px 25px;
-    --small-btn-padding: 12px 55px 11px 18px;
     --btn-font-size: 16px;
     --link-focus-outline: 2px solid var(--text-color);
     --small-btn-padding: 7px 50px 8px 16px;
