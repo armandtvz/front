@@ -89,8 +89,8 @@ def slider(request):
     return render(request, 'docs/slider.html')
 
 
-def dots(request):
-    return render(request, 'docs/dots.html')
+def status(request):
+    return render(request, 'docs/status.html')
 
 
 def chips(request):
