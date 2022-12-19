@@ -1,4 +1,6 @@
-.chip {
+.chip,
+.close-chip
+{
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
@@ -9,20 +11,19 @@
     line-height: 0;
     font-size: 0.9rem;
     font-weight: 400;
-    background: #f5f8fa;
+    background-color: #f5f8fa;
     border: 1px solid #c5ced6;
     color: rgb(57, 68, 77);
     font-size: calc(var(--font-size) - 3px);
+    text-decoration: none;
+}
+
+.chip:hover {
+    text-decoration: none;
 }
 
 .chip .dot::before {
     margin-right: 2px;
-}
-
-.dark-theme .chip {
-    background: #383838;
-    color: var(--text-color);
-    border-width: 2px;
 }
 
 .chip.online {}
@@ -31,4 +32,25 @@
 
 .chip:hover {
     background-color: var(--bg-color-darker);
+}
+
+.close-chip {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: 8% 70%;
+    background-size: 16px;
+    padding-left: 28px;
+    padding-right: 14px;
+}
+
+.dark-theme .close-chip {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') !important;
+}
+
+.dark-theme .chip,
+.dark-theme .close-chip
+{
+    background-color: #383838;
+    color: var(--text-color);
+    border-width: 2px;
 }
