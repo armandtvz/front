@@ -1,0 +1,23 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="container">
+                <nav aria-label="breadcrumb" class="breadcrumbs">
+                        <ol>
+                                <li>
+                                        <a href="{% url 'docs:index' %}">Home</a>
+                                </li>
+                                <li>
+                                        <a href="{% url 'docs:index' %}">Docs</a>
+                                </li>
+                                <li aria-current="page">
+                                        Breadcrumbs
+                                </li>
+                        </ol>
+                </nav>
+        </div>
+{% endblock body %}

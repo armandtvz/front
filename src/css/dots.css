@@ -1,0 +1,20 @@
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.dot.online {
+    background-color: var(--color-success);
+}
+
+.dot.offline {
+    background-color: #5a5a5a; /* TODO DARK MODE */
+}
+
+.dot.error {
+    background-color: var(--color-error);
+}

@@ -1,0 +1,53 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <button type="button" name="button" id="add-success-btn" class="btn small primary">Add success toast</button>
+        <button type="button" name="button" id="add-info-btn" class="btn small primary">Add info toast</button>
+        <button type="button" name="button" id="add-error-btn" class="btn small primary">Add error toast</button>
+        <button type="button" name="button" id="add-warning-btn" class="btn small primary">Add warning toast</button>
+
+        <main>
+        </main>
+{% endblock body %}
+
+
+
+
+{% block extrajs %}
+<script type="text/javascript">
+        const success = document.getElementById('add-success-btn');
+        success.addEventListener('click', (event) => {
+                add_toast('success')
+        });
+        const info = document.getElementById('add-info-btn');
+        info.addEventListener('click', (event) => {
+                add_toast('info')
+        });
+        const error = document.getElementById('add-error-btn');
+        error.addEventListener('click', (event) => {
+                add_toast('error')
+        });
+        const warning = document.getElementById('add-warning-btn');
+        warning.addEventListener('click', (event) => {
+                add_toast('warning')
+        });
+
+        function add_toast(css_class)
+        {
+                Toaster.add({
+                    css_class: css_class,
+                    text: 'New toast',
+                    // autoclose: true,
+                    // delay: 5000,
+                });
+        }
+
+        Toaster.add({
+            text: 'Added from JS'
+        });
+</script>
+{% endblock extrajs %}

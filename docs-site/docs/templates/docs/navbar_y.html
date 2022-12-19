@@ -1,0 +1,76 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+{% block head %}
+<style media="screen">
+        .sidenav.left.nav-is-open
+        {
+            /* transform: translate(var(--sidenav-width), 0vh) !important; */
+            /* transform: translate(var(--nav-y-width), 0vh) !important; */
+        }
+</style>
+{% endblock head %}
+
+
+{% block body %}
+        <button id="open-btn" class="show-on-768" data-open-sidenav="navbar-y" style="position: absolute; right: 0;">Open nav</button>
+
+        <nav id="navbar-y" class="navbar y left" aria-label="docs" aria-hidden="false" data-resp-nav="768">
+                <ul class="nav-list">
+                        <li class="show-on-768">
+                                <button id="close-btn" data-close-sidenav="navbar-y">Close</button>
+                        </li>
+                        <li>
+                                <a href="adsd">Home</a>
+                        </li>
+                        <li>
+                                <a href="adsd">General info</a>
+                        </li>
+                        <li>
+                                <a href="typography.html">Typography</a>
+                        </li>
+                        <li>
+                                <a href="forms.html">Forms</a>
+                        </li>
+                        <li>
+                                <a href="buttons.html">Buttons</a>
+                        </li>
+                        <li>
+                                <a href="#" class="collapse chevron-left">Navigation</a>
+                                <ul>
+                                        <li>
+                                                <a href="buttons.html">Sidenav</a>
+                                        </li>
+                                        <li>
+                                                <button class="collapse chevron-left">Navigation</button>
+                                                <ul>
+                                                        <li>
+                                                                <a href="buttons.html">Sidenav</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="buttons.html">Megamenu</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li>
+                                <a href="utils.html">Utils</a>
+                        </li>
+                </ul>
+        </nav>
+
+
+
+
+
+
+
+
+        <article class="story pt-2 pb-10">
+                <h1 class="mt-10">Heading</h1>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor aliquet magna vel mollis. Duis ac sodales turpis, non ornare libero. Quisque urna mi, facilisis nec orci vulputate, tempus lacinia eros. Etiam ullamcorper, neque vitae ullamcorper dictum, est purus ullamcorper augue, quis scelerisque nunc tortor et nisi. Integer et laoreet nunc. Nam ut rhoncus odio. Vestibulum eleifend dolor sed quam hendrerit, et volutpat mi consequat. Curabitur porttitor risus justo, vitae dictum ligula ullamcorper vitae. Praesent viverra elit eu nunc aliquet malesuada nec eu quam. Integer tempor faucibus metus sed viverra. Nulla dignissim, sapien vitae condimentum molestie, mauris massa laoreet orci, et rhoncus sapien mauris sit amet ante. Morbi vulputate lobortis velit, at bibendum lorem suscipit ut.
+                </p>
+        </article>
+{% endblock body %}

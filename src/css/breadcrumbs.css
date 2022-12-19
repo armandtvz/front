@@ -1,0 +1,25 @@
+nav.breadcrumbs {
+    padding: 15px 0px;
+    background-color: var(--bg-color);
+}
+
+nav.breadcrumbs ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+nav.breadcrumbs li {
+    display: inline;
+}
+
+nav.breadcrumbs li + li::before {
+    display: inline-block;
+    margin: 0em 0.25em;
+    margin: 0 5px;
+    content: '\203A';
+}
+
+nav.breadcrumbs [aria-current="page"] {
+    text-decoration: none;
+}

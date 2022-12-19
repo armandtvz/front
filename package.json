@@ -1,0 +1,31 @@
+{
+    "name": "front",
+    "version": "1.1.0",
+    "description": "A simple, lightweight, minimal, front-end framework.",
+    "main": "Gruntfile.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "dependencies": {
+        "grunt": "^1.4.1",
+        "grunt-cli": "^1.4.3"
+    },
+    "devDependencies": {
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-cssmin": "^4.0.0",
+        "grunt-contrib-uglify": "^5.0.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/armandtvz/front.git"
+    },
+    "author": "Armandt van Zyl",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/armandtvz/front/issues"
+    },
+    "homepage": "https://github.com/armandtvz/front#readme"
+}

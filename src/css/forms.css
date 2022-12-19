@@ -1,0 +1,817 @@
+/* General rules
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --space-above-form-control: 28px;
+    --space-above-checkbox: 21px;
+    --input-border-radius: 0;
+    --label-font-weight: 500;
+}
+
+.inline-form-group {
+    display: flex;
+    align-items: stretch;
+}
+
+input,
+textarea,
+select
+{
+    z-index: 10;
+    width: 100%;
+    display: block;
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-border-radius);
+    padding: 12px 12px;
+    background-color: var(--bg-input);
+    color: var(--text-color);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="range"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    border: 0px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+}
+
+.dark-theme select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+textarea {
+    line-height: var(--line-height);
+    resize: vertical;
+}
+
+select[multiple] {
+    height: 100%;
+    overflow-y: auto;
+    background-image: none;
+}
+
+label, legend {
+    margin-top: var(--space-above-form-control);
+    line-height: 0.9;
+    display: block;
+    font-weight: var(--label-font-weight);
+
+    /* NOTE:
+    Using padding because there is an unclickable space
+    on the label if used with margin */
+    padding-bottom: 10px;
+}
+
+fieldset legend {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+label.left-and-right-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset {
+    margin-top: var(--space-above-form-control);
+}
+
+fieldset label {
+    margin-top: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    margin-top: 10px;
+    width: auto;
+    display: inline;
+    border: 0;
+    padding: 12px 12px;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+input[type="radio"] + label {
+    font-weight: 400;
+    display: inline-flex;
+}
+
+input[type="checkbox"] + label {
+    display: inline-flex;
+    margin-top: var(--space-above-checkbox);
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+input[type="file"] {
+    border: 0;
+    padding: 12px 0;
+}
+
+input[type="search"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: var(--space-above-form-control) 0;
+}
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Form input states
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="file"]:focus {
+    box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus
+{
+    border-color: var(--color-focus);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem var(--color-focus-shadow);
+    transition: 80ms;
+}
+
+.invalid-input:focus {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 0.2rem var(--color-error-shadow);
+}
+
+input:disabled,
+.disabled
+{
+    color: var(--color-disabled);
+    cursor: not-allowed;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus
+{
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    transition: none;
+}
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+/* Form validation
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.input-help {
+    margin: 0;
+    margin-top: 4px;
+    list-style-type: none;
+    padding-left: 0;
+    display: block;
+}
+
+.input-help .input-help-text {
+    color: var(--text-color);
+}
+
+.input-help .input-error {
+    color: var(--color-error);
+}
+
+.input-help {
+    font-size: 16px;
+}
+
+.custom-checkbox-wrapper + .input-help {
+    padding-left: 26px;
+}
+
+.is-validated input:invalid,
+.invalid-input
+{
+    border: 3px solid var(--color-error);
+}
+
+.valid-input {
+    border: 3px solid var(--color-success);
+}
+
+
+/* The error at the top of the form letting the user know there are
+   errors that need to be fixed.
+*/
+.form-error-alert {
+    padding: 16px 0px 16px 48px;
+    background-image: var(--icon-error);
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-size: 24px;
+    margin-bottom: 40px;
+    background-color: var(--bg-error);
+    color: var(--text-color);
+}
+.form-error-alert.top {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-top: 3.5px solid var(--color-error);
+    border-left: 0;
+}
+.form-error-alert.left {
+    margin-top: var(--space-above-form-control);
+    margin-bottom: 0px;
+    border-left: 3.5px solid var(--color-error);
+}
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+/* Form sizes
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.small-form input,
+.small-form textarea,
+.small-form select
+{
+    padding: 8px 12px;
+}
+
+/* .small-form input[type='submit'] {
+    padding: var(--btn-padding);
+    font-size: 15px;
+    font-size: var(--btn-font-size, 15px);
+} */
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom radio button. Based on radio buttons from IBM Carbon.
+----------------------------------------------------------------------------- */
+
+/*
+    Of course, radio buttons cannot be used as separate elements like checkboxes.
+    Therefore, they will always be grouped.
+    Always place them inside a `<fieldset>` element. Also, if they are not
+    placed in a fieldset the spacing will not be correct.
+*/
+fieldset .custom-radio-button-wrapper {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-top: 8px;
+
+    /* TODO REVIEW */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.custom-radio-button-wrapper input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    visibility: visible;
+    white-space: nowrap;
+    visibility: inherit;
+}
+
+.custom-radio-button-wrapper label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    margin-right: 1.25rem;
+}
+
+/* The dot's border */
+.custom-radio-button-wrapper .dot {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--bg-inverse);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 1.125rem;
+    width: 1.125rem;
+    margin-right: 0.5rem;
+}
+
+.dark-theme .custom-radio-button-wrapper .dot {
+    border-width: 2px;
+}
+
+/* The dot's border when checked */
+.custom-radio-button-wrapper input:checked + label .dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-color: var(--bg-inverse);
+}
+
+/* The actual dot in the center of the input indicating a checked state */
+.custom-radio-button-wrapper input:checked + label .dot:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--bg-inverse);
+    border-color: var(--bg-inverse);
+}
+
+[disabled] ~ _ {
+    font-size: inherit;
+}
+
+.custom-radio-button-wrapper input:disabled + label {
+    color: var(--color-disabled);
+    cursor: not-allowed;
+}
+
+.custom-radio-button-wrapper input:disabled + label .dot,
+.custom-radio-button-wrapper input:disabled:checked + label .dot
+{
+    border-color: var(--color-disabled);
+}
+
+.custom-radio-button-wrapper input:disabled + label .dot::before,
+.custom-radio-button-wrapper input:disabled:checked + label .dot::before
+{
+    background-color: var(--color-disabled);
+}
+
+.custom-radio-button-wrapper input:focus + label .dot
+{
+    box-shadow: 0 0 0 3px var(--color-focus); /* TODO REVIEW Transparency */
+    outline: 1px solid transparent;
+}
+
+.custom-radio-button-wrapper:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
+.custom-radio-button-wrapper label {
+    margin-top: 0;
+}
+
+.custom-radio-button-wrapper .text {
+    user-select: none;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom checkbox. Based on checkboxes from IBM Carbon.
+----------------------------------------------------------------------------- */
+.custom-checkbox-wrapper input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+.custom-checkbox-wrapper {
+    display: block;
+    align-items: center;
+    border: none;
+    margin-top: 6px;
+}
+
+/*
+    To group related checkboxes, place them inside a `<fieldset>` element.
+*/
+fieldset .custom-checkbox-wrapper {
+    display: flex;
+}
+
+.custom-checkbox-wrapper label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    padding-left: 26px;
+    min-height: 1.5rem;
+    user-select: none;
+}
+
+/* The custom checkbox */
+.custom-checkbox-wrapper label::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    margin: 0.125rem;
+    position: absolute;
+    left: 0;
+    top: 0.125rem;
+    background-color: transparent;
+    border: 1px solid var(--bg-inverse);
+    border-radius: 0;
+}
+
+/* This is the check in the checkbox */
+.custom-checkbox-wrapper label::after {
+    content: '';
+    position: absolute;
+    left: 0.375rem;
+    top: 0.5rem;
+    width: 0.5625rem;
+    height: 0.3125rem;
+    background: none;
+    border-left: 2px solid var(--bg-color);
+    border-bottom: 2px solid var(--bg-color);
+    transform: scale(0) rotate(-45deg);
+    transform-origin: bottom right;
+    margin-top: -0.1875rem;
+}
+
+.custom-checkbox-wrapper input:checked + label::before,
+.custom-checkbox-wrapper input:indeterminate + label::before
+{
+    background-color: var(--bg-inverse);
+    border-color: var(--bg-inverse);
+    border-width: 1px;
+}
+
+.custom-checkbox-wrapper input:checked + label::after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.custom-checkbox-wrapper input:indeterminate + label::after {
+    transform: scale(1) rotate(0deg);
+    border-left: 0 solid var(--bg-color);
+    border-bottom: 2px solid var(--bg-color);
+    width: 0.5rem;
+    top: 0.6875rem;
+}
+
+.custom-checkbox-wrapper input:focus + label::before,
+.custom-checkbox-wrapper input:checked:focus + label::before,
+.custom-checkbox-wrapper input:indeterminate:focus + label::before
+{
+    outline: 2px solid var(--color-focus-checkbox);
+    outline-offset: 1px;
+    border-width: 3px;
+    width: 1rem;
+    height: 1rem;
+}
+
+[disabled] ~ _ {
+    font-size: inherit;
+}
+
+.custom-checkbox-wrapper input:disabled + label {
+    cursor: not-allowed;
+    color: var(--color-disabled);
+}
+
+.custom-checkbox-wrapper input:disabled + label::before {
+    border-color: var(--color-disabled);
+    background-color: var(--color-disabled);
+}
+
+.custom-checkbox-wrapper input:checked:disabled + label::before,
+.custom-checkbox-wrapper input:indeterminate:disabled + label::before
+{
+    background-color: var(--color-disabled);
+}
+
+label + .custom-checkbox-wrapper label,
+legend + .custom-checkbox-wrapper label
+{
+    margin-top: 0;
+}
+
+fieldset .custom-checkbox-wrapper label {
+    margin-top: 0;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+.submit-row {
+    margin-top: var(--space-above-form-control);
+}
+
+.submit-row > input,
+.submit-row > button,
+.submit-row > a
+{
+    margin-top: 0;
+}
+
+
+.btn, input {
+    text-transform: none;
+}
+
+.btn.small {
+    text-transform: none;
+}
+
+a.btn {
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+/* TODO REVIEW everything from this point on */
+
+
+input[type=checkbox] + label {
+    padding-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.errorlist {
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: var(--form-font-size);
+}
+
+ul.errorlist.nonfield {
+    list-style: none;
+    padding: 16px 48px;
+    /* margin: 32px 0; */
+    margin: 44px 0 0 0;
+    background-image: url('/static/core/icons/alert-circle-white.svg');
+    background-repeat: no-repeat;
+    background-position: 14px;
+    background-size: 21px;
+    background-color: #cc0000;
+    color: var(--color-light);
+}
+
+/* TODO REVIEW */
+.helptext {
+    margin: 4px 0 8px 0;
+    font-size: calc(var(--font-size) - 1px);
+    display: block;
+}
+
+.helptext ul {
+    font-size: calc(var(--font-size) - 1px);
+    margin-top: 8px;
+    margin-bottom: var(--space-around-p);
+}
+
+ul.errorlist + input,
+ul.errorlist + select
+{
+    border: 3px solid var(--color-error);
+}
+ul.errorlist + input:focus,
+ul.errorlist + select:focus
+{
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 0.2rem var(--color-error-shadow);
+}
+
+ul.errorlist + p > input,
+ul.errorlist + p > select
+{
+    border: 3px solid var(--color-error);
+}
+ul.errorlist + p > input:focus,
+ul.errorlist + p > select:focus
+{
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 0.2rem var(--color-error-shadow);
+}
+
+
+
+
+/* TODO REVIEW  */
+/* Resets the previous rules for nonfield errors */
+ul.errorlist.nonfield + p > input,
+ul.errorlist.nonfield + p > select
+{
+    border: 1px solid var(--input-border);
+}
+ul.errorlist.nonfield + p > input:focus,
+ul.errorlist.nonfield + p > select:focus
+{
+    border-color: var(--color-focus);
+    box-shadow: 0 0 0 .2rem var(--color-focus-shadow);
+}
+
+
+
+
+
+
+form br {
+    /*
+        TODO REVIEW HACK FIX
+        Django inserts br tags before help text.
+    */
+    display: none;
+}
+
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    margin-top: 10px;
+    width: auto;
+    display: inline;
+    border: 0;
+    padding: 12px 12px;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-container {
+    position: relative;
+}
+
+.range-label {
+    position: absolute;
+    bottom: -16px;
+}
+
+.range-label-min {
+    left: 0;
+}
+
+.range-label-max {
+    right: 0;
+}
+
+.range-value {
+    position: absolute;
+    bottom: -16px;
+    left: 47%;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.input-addon {
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--bg-color);
+    border: 1px solid #ced4da;
+    z-index: 0;
+
+    border-top-left-radius: 0px;
+    border-top-right-radius: var(--input-border-radius);
+    border-bottom-right-radius: var(--input-border-radius);
+    border-bottom-left-radius: 0px;
+}
+
+.percentage-addon {
+    font-size: calc(var(--font-size) + 2px);
+    font-weight: var(--label-font-weight);
+}
+
+
+.before-addon {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

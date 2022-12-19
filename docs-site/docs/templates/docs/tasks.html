@@ -1,0 +1,32 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="task-status active" data-status="running" data-pk="">
+                <div class="task-status-content">
+                        <div class="">
+                                <p>
+                                        <span class="description">
+                                                A background task
+                                        </span> -
+                                        <span class="task-status-text">
+                                                running
+                                        </span>
+                                        <span class="progress"></span>
+                                </p>
+                        </div>
+                </div>
+                <div class="progress-bar">
+                        <div class="progress-bar-value" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+        </div>
+{% endblock body %}
+
+
+
+
+{% block extrajs %}
+{% endblock extrajs %}

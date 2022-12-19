@@ -1,0 +1,516 @@
+/* Core sidenav styles
+----------------------------------------------------------------------------- */
+:root {
+    --sidenav-width: 100vw;
+    --sidenav-height: 100vh;
+    --sidenav-transition-duration: 450ms;
+    --sidenav-transition: transform var(--sidenav-transition-duration) cubic-bezier(.83,.04,.19,.98);
+    --sidenav-element-padding: 16px;
+    --fade-links-animation: fadeInAndDown 300ms 1 both;
+    --fade-links-animation-delay: 35ms;
+    --sidenav-indent: 24px;
+}
+
+@media (max-width: 768px) {
+    .navbar.y[data-resp-nav] {
+        display: none;
+    }
+}
+
+.sidenav {
+    width: var(--sidenav-width);
+    height: var(--sidenav-height);
+    position: fixed;
+    transition: var(--sidenav-transition);
+    transition-property: transform, opacity;
+    text-align: left;
+    overflow-y: auto; /* REVIEW TODO */
+    z-index: 10000; /* REVIEW TODO */
+    will-change: transform, opacity;
+    list-style: none;
+    background-color: var(--bg-navbar);
+    width: var(--sidenav-width);
+    height: var(--sidenav-height);
+    position: fixed;
+    transition: var(--sidenav-transition);
+    transition-property: transform, opacity;
+    text-align: left;
+    display: block !important;
+}
+
+.sidenav,
+.navbar.sidenav,
+.navbar .sidenav
+{
+    padding: 5vh 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dark-theme .sidenav {
+    /* background-color: var(--color-gray); */
+}
+
+.sidenav.top {
+    top: calc(var(--sidenav-height) * -1);
+}
+
+.sidenav.right {
+    top: 0;
+    right: calc(var(--sidenav-width) * -1);
+}
+
+.sidenav.bottom {
+    bottom: calc(var(--sidenav-height) * -1);
+}
+
+.sidenav.left {
+    top: 0;
+    left: calc(var(--sidenav-width) * -1);
+}
+
+.sidenav.nav-is-open {
+    visibility: visible;
+}
+
+.sidenav.top.nav-is-open {
+    transform: translate(0vw, var(--sidenav-height)) !important;
+}
+
+.sidenav.right.nav-is-open {
+    transform: translate(calc(var(--sidenav-width) * -1), 0vh) !important;
+}
+
+.sidenav.bottom.nav-is-open {
+    transform: translate(0vw, calc(var(--sidenav-height) * -1)) !important;
+}
+
+.sidenav.left.nav-is-open {
+    transform: translate(var(--sidenav-width), 0vh) !important;
+}
+
+.sidenav li a,
+.sidenav li button
+{
+    --nav-font-size: 25px;
+}
+
+.sidenav li a {
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    color: var(--text-color);
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidenav > ul {
+    margin: 0;
+}
+
+/* Special case - opacity sidenav */
+.sidenav.opacity {
+    opacity: 0;
+    top: 0;
+    pointer-events: none;
+
+    /*
+    Remember that setting this to 0ms would cause the
+    transition to never end because there is no
+    transition, therefore, the links won't show because
+    transitionend never happens.
+    */
+    transition: 1ms !important;
+}
+
+.sidenav.opacity.left-side {
+    left: 0;
+}
+
+.sidenav.opacity.right-side {
+    right: 0;
+}
+
+.sidenav.opacity.nav-is-open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+.dark-theme .sidenav {
+    color: var(--text-color);
+}
+
+
+
+/* TODO REVIEW */
+.sidenav li a,
+.sidenav li button,
+.navbar.sidenav li a,
+.navbar.sidenav li button,
+.navbar .sidenav li a,
+.navbar .sidenav li button
+{
+    margin: 0;
+    display: inline-block;
+    /* width: auto; */
+    width: 100%;
+    line-height: normal;
+    padding: 10px 40px;
+}
+
+
+
+
+
+/* Sidenav header
+----------------------------------------------------------------------------- */
+.sidenav .header {
+    padding: var(--sidenav-element-padding);
+    display: flex;
+}
+
+.sidenav .header .header-button {
+    display: flex;
+    vertical-align: middle;
+
+    justify-content: space-between;
+}
+
+.sidenav .header .header-back-text {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.sidenav-icon {
+    width: 8px;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* Fade links
+----------------------------------------------------------------------------- */
+.sidenav.fade-links li {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: none !important;
+}
+
+.sidenav.fade-links li.show-link {
+    animation: var(--fade-links-animation);
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sidenav buttons
+----------------------------------------------------------------------------- */
+.sidenav [data-close-sidenav] {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+
+    padding: 10px 40px; /* TODO REVIEW This is not DRY */
+
+    /* TODO REVIEW !important directives */
+    margin-bottom: 30px !important;
+    font-size: var(--nav-font-size);
+    color: var(--text-color);
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fixed sidenav
+----------------------------------------------------------------------------- */
+.sidenav.is-fixed.top {
+    transform: translate(0vw, var(--sidenav-height)) !important;
+}
+
+.sidenav.is-fixed.right {
+    transform: translate(calc(var(--sidenav-width) * -1), 0vh) !important;
+}
+
+.sidenav.is-fixed.bottom {
+    transform: translate(0vw, calc(var(--sidenav-height) * -1)) !important;
+}
+
+.sidenav.is-fixed.left {
+    transform: translate(var(--sidenav-width), 0vh) !important;
+}
+
+.sidenav.is-fixed [data-close-sidenav] {
+    display: none;
+}
+
+.sidenav.is-fixed.fade-links li {
+    opacity: 1;
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* States
+----------------------------------------------------------------------------- */
+.sidenav.mega a:focus {
+    outline-width: 1.5px;
+    outline-style: inset;
+    outline-color: var(--color-dark);
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animations
+----------------------------------------------------------------------------- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAndDown {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes fadeInAndRight {
+    0% {
+        opacity: 0;
+        transform: translate(-25px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+/*
+For now, support animation-delay of max 20 items in the sidenav.
+See sidenav.js docs for an explanation of why this is necessary and
+why a Web Animations API / a setTimeout solution is not used.
+*/
+.sidenav.fade-links li.show-link:nth-child(1) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 0);
+}
+
+.sidenav.fade-links li.show-link:nth-child(2) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 1);
+}
+
+.sidenav.fade-links li.show-link:nth-child(3) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 2);
+}
+
+.sidenav.fade-links li.show-link:nth-child(4) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 3);
+}
+
+.sidenav.fade-links li.show-link:nth-child(5) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 4);
+}
+
+.sidenav.fade-links li.show-link:nth-child(6) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 5);
+}
+
+.sidenav.fade-links li.show-link:nth-child(7) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 6);
+}
+
+.sidenav.fade-links li.show-link:nth-child(8) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 7);
+}
+
+.sidenav.fade-links li.show-link:nth-child(9) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 8);
+}
+
+.sidenav.fade-links li.show-link:nth-child(10) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 9);
+}
+
+.sidenav.fade-links li.show-link:nth-child(11) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 0);
+}
+
+.sidenav.fade-links li.show-link:nth-child(12) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 1);
+}
+
+.sidenav.fade-links li.show-link:nth-child(13) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 2);
+}
+
+.sidenav.fade-links li.show-link:nth-child(14) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 3);
+}
+
+.sidenav.fade-links li.show-link:nth-child(15) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 4);
+}
+
+.sidenav.fade-links li.show-link:nth-child(16) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 5);
+}
+
+.sidenav.fade-links li.show-link:nth-child(17) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 6);
+}
+
+.sidenav.fade-links li.show-link:nth-child(18) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 7);
+}
+
+.sidenav.fade-links li.show-link:nth-child(19) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 8);
+}
+
+.sidenav.fade-links li.show-link:nth-child(20) {
+    animation-delay: calc(var(--fade-links-animation-delay) * 9);
+}
+/*
+----------------------------------------------------------------------------- */
+
+
+
+
+/* TODO REVIEW */
+@media (prefers-reduced-motion) {
+    .sidenav {
+        --sidenav-transition-duration: 1ms !important;
+        --fade-links-animation: fadeInAndDown 0ms 1 both;
+        --fade-links-animation-delay: 0ms;
+    }
+}
+
+
+
+/* TODO REVIEW */
+.navbar.y > ol,
+.navbar.y > ul
+{
+    margin-top: 64px;
+}
+
+@media (max-width: 576px) {
+    .navbar.y > ol,
+    .navbar.y > ul
+    {
+        margin-top: 0;
+        padding-bottom: 20vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-icon-btn {
+        padding: 8px !important;
+    }
+    .sidenav li a, .sidenav li button {
+        --nav-font-size: 20px;
+    }
+}

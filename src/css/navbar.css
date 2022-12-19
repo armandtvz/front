@@ -1,0 +1,266 @@
+:root {
+    --nav-y-width: 230px;
+
+    --nav-x-height: 0; /* TODO REVIEW */
+    /* --nav-x-height: 64px; */
+
+    /* TODO REVIEW */
+    --navbar-x-li-display: inline-flex;
+    --navbar-y-li-display: block;
+    --nav-font-size: 16px;
+}
+
+
+
+
+/* Navbar
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.navbar {
+    z-index: 1000;
+    background-color: var(--bg-navbar);
+}
+
+
+/* Regular horizontal nav */
+.navbar.x {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar.x > *:nth-child(1) {
+    width: 100%;
+}
+
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* TODO REVIEW */
+.navbar.x ul,
+.navbar.x ul > ul,
+.navbar.x ol,
+.navbar.x ol > ol
+{
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.navbar.x ul,
+.navbar.x ol
+{
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar.x li {
+    display: var(--navbar-x-li-display);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: normal;
+    background-color: inherit;
+    color: var(--color-dark);
+    color: inherit;
+    text-align: left;
+    font-size: var(--nav-font-size);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--btn-transition-time);
+    transition-property: background-color;
+}
+
+.navbar button {
+    background-color: inherit;
+    border: 0;
+    text-align: center;
+}
+
+/* REVIEW Selectors */
+.navbar li a,
+.navbar li button
+{
+    font-size: var(--nav-font-size);
+    display: inline-block;
+    padding: 18px 22px;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: normal;
+    transition: var(--btn-transition-time);
+    transition-property: background-color;
+}
+
+/* TODO REVIEW active */
+/* .navbar ul a:active,
+.navbar ul button:active, */
+.navbar ul a:focus,
+.navbar ul button:focus
+{
+    /* outline: 1.5px solid var(--color-primary); */
+    outline: 2px solid var(--text-color);
+    outline-offset: -2px;
+    background-color: inherit;
+}
+
+.dark-theme a:focus,
+.navbar ul button:focus
+{
+    outline: 2px solid var(--text-color);
+}
+
+
+
+.navbar ul a:hover,
+.navbar ul button:hover
+{
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+.dark-theme .navbar ul a:hover,
+.dark-theme .navbar ul button:hover
+{
+    background-color: var(--color-secondary-dark);
+}
+
+
+.navbar ul .selected
+{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar.y ul .selected {
+    box-shadow: inset 3px 0 0 0 var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Vertical nav */
+
+.navbar.y {
+    padding: 2vh 0 10vh 0;
+    margin-bottom: 15px;
+    position: fixed;
+    top: var(--nav-x-height);
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;
+    width: var(--nav-y-width);
+}
+
+.navbar.y li {
+    display: var(--navbar-y-li-display);
+}
+
+.navbar.y li a,
+.navbar.y li button
+{
+    display: block;
+    padding: 12px 24px;
+    padding-left: 34px;
+    width: 100%;
+    text-align: left;
+}
+
+.navbar.y ul,
+.navbar.y ol
+{
+    margin: 0;
+}
+
+.navbar.y li > ul a,
+.navbar.y li > ul button,
+.navbar.y li > ol a,
+.navbar.y li > ol button
+{
+    /* padding-left: 40px; */
+    /* padding-left: 54px; */
+    padding-left: 50px;
+}
+
+.navbar.y li > ul > li > ul a,
+.navbar.y li > ul > li > ul button,
+.navbar.y li > ol > li > ol a,
+.navbar.y li > ol > li > ol button
+{
+    padding-left: 60px;
+    padding-left: 74px;
+}
+
+
+.navbar.y > ul,
+.navbar.y > ol
+{
+    display: block;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* TODO REVIEW */
+.navbar.y li .selected,
+.navbar.y li .active
+{
+    /* box-shadow: inset 7px 0 0 0 var(--color-primary); */
+}
+
+.navbar.y li > ul,
+.navbar.y li > ul > li > ul,
+.navbar.y li > ol,
+.navbar.y li > ol > li > ol
+{
+    padding-left: 0;
+}
+
+
+
+
+
+.nav-list li a:hover,
+.nav-list li button:hover
+{
+    background-color: #e9ecef;
+}
+
+.dark-theme .nav-list li a:hover,
+.dark-theme .nav-list li button:hover
+{
+    background-color: var(--color-secondary-dark);
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    :root {
+        --nav-y-width: 100vw;
+    }
+
+    body {
+        /* padding-top: 60px; */
+        padding-left: 0 !important;
+    }
+}
