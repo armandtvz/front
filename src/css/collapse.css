@@ -94,3 +94,7 @@
 .collapse {
     cursor: pointer;
 }
+
+button.collapse {
+    width: 100%;
+}
