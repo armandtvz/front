@@ -43,7 +43,7 @@ module.exports = function(grunt)
                 {
                     'dist/front.min.css': [
                         'src/css/normalize.css',
-                        'src/css/bootstrap-grid.css',
+                        'src/css/bootstrap/bootstrap-grid.css',
                         'src/css/colors.css',
                         'src/css/base.css',
                         'src/css/animations.css',
