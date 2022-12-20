@@ -13,6 +13,6 @@
         document.addEventListener('click', (event) => {
             dropup.classList.remove('open');
             dropup.setAttribute('aria-hidden', true);
-        })
+        });
     });
 }());
