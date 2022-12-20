@@ -213,7 +213,14 @@
             const mq = window.matchMedia(`(max-width: ${breakpoint}px)`);
             handle_resize(mq); // Need to do this otherwise things will be broken with initial load
 
-            mq.addEventListener('change', handle_resize);
+            if (! mq.addEventListener)
+            {
+                mq.addListener(handle_resize);
+            }
+            else
+            {
+                mq.addEventListener('change', handle_resize);
+            }
 
             function handle_resize(mq)
             {
