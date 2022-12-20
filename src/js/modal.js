@@ -6,6 +6,9 @@ const modal = (function()
     {
         modal_element.addEventListener('click', (event) =>
         {
+            if (modal_element.classList.contains('close-buttons-only')) {
+                return;
+            }
             if (event.target.classList.contains('modal'))
             {
                 close(modal_element);
@@ -27,15 +30,18 @@ const modal = (function()
         register(modal_element);
     });
 
+
     function open(modal_element)
     {
         modal_element.classList.add('is-showing');
     }
 
+
     function close(modal_element)
     {
         modal_element.classList.remove('is-showing');
     }
+
 
     function toggle(modal_element)
     {
