@@ -5,4 +5,4 @@ node_modules/**.js
 tests/**/*.js
 modernizr.js
 gitignore/
-venv/
+site-packages/
