@@ -1,14 +1,9 @@
 'use strict';
-
-module.exports = function(grunt)
-{
+module.exports = function(grunt) {
     grunt.initConfig({
-        uglify:
-        {
-            target:
-            {
-                files:
-                {
+        uglify: {
+            target: {
+                files: {
                     'dist/front.min.js': [
                         'src/js/utils.js',
                         'src/js/slider.js',
@@ -30,17 +25,13 @@ module.exports = function(grunt)
                 }
             }
         },
-        cssmin:
-        {
-            options:
-            {
+        cssmin: {
+            options: {
                 mergeIntoShorthands: false,
                 roundingPrecision: -1
             },
-            target:
-            {
-                files:
-                {
+            target: {
+                files: {
                     'dist/front.min.css': [
                         'src/css/normalize.css',
                         'src/css/bootstrap/bootstrap-grid.css',
