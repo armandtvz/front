@@ -85,5 +85,5 @@ const Toaster = function() {
 
     return {
         add: add,
-    }
+    };
 }();
