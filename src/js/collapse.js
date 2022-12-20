@@ -100,7 +100,7 @@ const collapsible = (function() {
                     });
                 }
             }
-        }
+        };
         const observer = new MutationObserver(callback);
         observer.observe(mutation_target_node, config);
     }
@@ -108,5 +108,5 @@ const collapsible = (function() {
 
     return {
         register_new_collapser: register_new_collapser,
-    }
+    };
 })();
