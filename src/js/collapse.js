@@ -25,8 +25,7 @@ const collapsible = (function() {
     _find_and_add_collapsers();
 
 
-    function _collapse(e)
-    {
+    function _collapse(e) {
         e.preventDefault();
         const btn = this;
 
