@@ -61,5 +61,5 @@ const front_utils = function() {
         string_to_html: string_to_html,
         get_closest_parent: get_closest_parent,
         required_arg: required_arg,
-    }
+    };
 }();
