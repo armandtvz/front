@@ -1,6 +1,5 @@
+'use strict';
 (function() {
-    'use strict';
-
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const btn = document.getElementById('dark-light-toggle');
 

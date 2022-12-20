@@ -1,5 +1,5 @@
+'use strict';
 (function() {
-    'use strict';
     const open_dropups = document.querySelectorAll('[data-open-dropup]');
     open_dropups.forEach((btn, i) => {
         const dropup_id = btn.dataset.openDropup;

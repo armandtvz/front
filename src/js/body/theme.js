@@ -1,3 +1,4 @@
+'use strict';
 const body = document.querySelector('body');
 const current_theme = body.dataset.theme;
 if (current_theme === 'system' || ! current_theme)

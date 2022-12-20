@@ -8,9 +8,8 @@
 // TODO collapsible groups
 // TODO collapse all-expand all
 
+'use strict';
 const collapsible = (function() {
-    'use strict';
-
     // Collapsers are buttons that expand and collapse their immediate
     // sibling element.
     let collapsers = undefined;

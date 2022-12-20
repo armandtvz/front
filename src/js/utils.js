@@ -1,6 +1,6 @@
+'use strict';
 const front_utils = function()
 {
-    'use strict';
 
 
     /**

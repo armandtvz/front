@@ -1,10 +1,6 @@
+'use strict';
 (function()
 {
-    'use strict';
-
-
-
-
     const utils = (function()
     {
         // Copied from Underscore.js

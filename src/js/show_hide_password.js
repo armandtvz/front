@@ -1,7 +1,6 @@
+'use strict';
 (function()
 {
-    'use strict';
-
     const show_password_btn = document.getElementById('show_password_btn');
     const password_input = document.querySelector('input[type="password"]');
 

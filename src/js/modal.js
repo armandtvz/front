@@ -1,5 +1,4 @@
 'use strict';
-
 const modal = (function()
 {
     function register(modal_element)

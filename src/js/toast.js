@@ -1,7 +1,6 @@
-
+'use strict';
 const Toaster = function()
 {
-    'use strict';
     const animate_css_class = 'animate';
     let toaster = document.getElementById('toaster');
     const toaster_markup = `<div class="toaster" id="toaster" role="alert" aria-live="polite"></div>`;

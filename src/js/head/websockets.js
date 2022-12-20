@@ -1,7 +1,7 @@
+'use strict';
 const ws = {};
 (function()
 {
-    'use strict';
     if (window.location.protocol == 'https:')
     {
         ws.scheme = 'wss://';

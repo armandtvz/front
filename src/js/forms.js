@@ -1,5 +1,5 @@
+'use strict';
 (function() {
-    'use strict';
     var targets = document.querySelectorAll("[data-maxlength-counter]");
 
     function count_chars(target, max_length, counter) {
@@ -30,7 +30,6 @@
  * for the input.
  */
 (function() {
-    'use strict';
     document.addEventListener('DOMContentLoaded', () => {
         const addons = document.querySelectorAll('.input-addon');
         addons.forEach((addon, i) => {
