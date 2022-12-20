@@ -51,8 +51,21 @@ const front_utils = function()
 
 
 
+    function required_arg(arg=undefined) {
+        const error = new Error(`Required argument missing (${arg})`);
+        if (Error.captureStackTrace)
+        {
+            Error.captureStackTrace(error, required_arg);
+        }
+        throw error;
+    }
+
+
+
+
     return {
         string_to_html: string_to_html,
         get_closest_parent: get_closest_parent,
+        required_arg: required_arg,
     }
 }();
