@@ -3,4 +3,5 @@
 docs/_build/**/*.js
 node_modules/**.js
 tests/**/*.js
+gitignore/
 modernizr.js
