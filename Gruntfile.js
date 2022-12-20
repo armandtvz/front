@@ -48,6 +48,7 @@ module.exports = function(grunt)
                         'src/css/base.css',
                         'src/css/animations.css',
                         'src/css/icons.css',
+                        'src/css/loading.css',
                         'src/css/utils.css',
                         'src/css/navbar.css',
                         'src/css/sidenav.css',
