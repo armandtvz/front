@@ -64,7 +64,7 @@ module.exports = function(grunt)
                         'src/css/typography-base.css',
                         'src/css/buttons.css',
                         'src/css/tasks.css',
-                        'src/css/dots.css',
+                        'src/css/status.css',
                         'src/css/chips.css',
                     ]
                 }
