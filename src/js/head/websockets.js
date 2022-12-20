@@ -1,13 +1,9 @@
 'use strict';
 const ws = {};
-(function()
-{
-    if (window.location.protocol == 'https:')
-    {
+(function() {
+    if (window.location.protocol === 'https:') {
         ws.scheme = 'wss://';
-    }
-    else
-    {
+    } else {
         ws.scheme = 'ws://';
     }
 }());
