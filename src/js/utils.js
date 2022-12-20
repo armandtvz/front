@@ -17,8 +17,7 @@ const front_utils = function() {
 
 
 
-    function get_closest_parent(elem, selector)
-    {
+    function get_closest_parent(elem, selector) {
         // From here: https://gomakethings.com/how-to-get-the-closest-parent-element-with-a-matching-selector-using-vanilla-javascript/
     	// Element.matches() polyfill
     	if (!Element.prototype.matches) {
