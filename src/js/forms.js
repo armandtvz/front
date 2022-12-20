@@ -1,9 +1,9 @@
 'use strict';
 (function() {
-    var targets = document.querySelectorAll("[data-maxlength-counter]");
+    const targets = document.querySelectorAll("[data-maxlength-counter]");
 
     function count_chars(target, max_length, counter) {
-        let current_length = target.value.length;
+        const current_length = target.value.length;
         counter.textContent = `${current_length} / ${max_length}`;
     }
 
