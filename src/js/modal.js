@@ -55,6 +55,13 @@ const modal = (function()
         }
     }
 
+    document.addEventListener('keyup', (event) => {
+        if(event.key === 'Escape') {
+            modals.forEach((element, i) => {
+                close(element);
+            });
+        }
+    });
     return {
         open: open,
         close: close,
