@@ -1,19 +1,14 @@
 'use strict';
-const Toaster = function()
-{
+const Toaster = function() {
     const animate_css_class = 'animate';
     let toaster = document.getElementById('toaster');
     const toaster_markup = `<div class="toaster" id="toaster" role="alert" aria-live="polite"></div>`;
-    if (! toaster)
-    {
+    if (! toaster) {
         toaster = front_utils.string_to_html(toaster_markup);
         const main_element = document.querySelector('main');
-        if (! main_element)
-        {
+        if (! main_element) {
             document.body.prepend(toaster);
-        }
-        else
-        {
+        } else {
             main_element.prepend(toaster);
         }
     }
@@ -30,8 +25,7 @@ const Toaster = function()
     );
 
 
-    function init()
-    {
+    function init() {
         const toast_elements = document.querySelectorAll('.toast');
         toast_elements.forEach((toast, i) => {
             add(toast);
@@ -47,56 +41,43 @@ const Toaster = function()
         delay = 5000,
         toast = undefined,
         text = undefined,
-    })
-    {
-        if (! toast && text)
-        {
+    }) {
+        if (! toast && text) {
             toast = front_utils.string_to_html(toast_markup);
             toast.classList.add(css_class);
-            if (animate)
-            {
+            if (animate) {
                 toast.classList.add(animate_css_class);
             }
-            if (! autoclose)
-            {
+            if (! autoclose) {
                 toast.dataset.delay = '-1';
-            }
-            else
-            {
+            } else {
                 toast.dataset.delay = delay;
             }
             const toast_text = toast.querySelector('.toast-text');
             toast_text.textContent = text;
             toaster.prepend(toast);
-        }
-        else
-        {
+        } else {
             return;
         }
 
         const close_btn = toast.querySelector('.close-toast-btn');
-        close_btn.addEventListener('click', (event) =>
-        {
+        close_btn.addEventListener('click', (event) => {
             remove(toast, 0);
         });
 
         // Setting the delay to -1 will disable autoclosing
         delay = toast.dataset.delay;
-        if (delay != -1)
-        {
-            window.setTimeout(() =>
-            {
+        if (delay != -1) {
+            window.setTimeout(() => {
                 remove(toast, 300);
             }, delay);
         }
     }
 
 
-    function remove(toast, delay=0)
-    {
+    function remove(toast, delay=0) {
         toast.classList.add('remove');
-        window.setTimeout(() =>
-        {
+        window.setTimeout(() => {
             toast.remove();
         }, delay);
     }
