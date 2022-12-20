@@ -34,11 +34,9 @@ const Toaster = function()
     function init()
     {
         const toast_elements = document.querySelectorAll('.toast');
-        for (var i = 0; i < toast_elements.length; i++)
-        {
-            const toast_element = toast_elements[i];
-            add(toast_element);
-        }
+        toast_elements.forEach((toast, i) => {
+            add(toast);
+        });
     }
     init();
 

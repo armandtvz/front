@@ -21,10 +21,9 @@ const collapsible = (function()
     function _find_and_add_collapsers()
     {
         collapsers = document.querySelectorAll('.collapse');
-        for (let i = 0; i < collapsers.length; i++)
-        {
-            register_new_collapser(collapsers[i]);
-        }
+        collapsers.forEach((collapser, i) => {
+            register_new_collapser(collapser);
+        });
     }
     _find_and_add_collapsers();
 
@@ -90,12 +89,9 @@ const collapsible = (function()
                 if (mutation.type === 'childList')
                 {
                     // A child node has been added or removed
-                    for (let i = 0; i < mutation.addedNodes.length; i++)
-                    {
-                        let element = mutation.addedNodes[i];
+                    mutation.addedNodes.forEach((element, i) => {
                         if (element instanceof Element)
                         {
-
                             // TODO DRY: Why is this here?
                             // if (element.tagName.toLowerCase() === 'form')
                             // {
@@ -105,8 +101,6 @@ const collapsible = (function()
                             //     });
                             // }
 
-
-
                             // Handle new collapsers
                             const collapsers = element.querySelectorAll('.collapse');
                             for (let count = 0; count < collapsers.length; count++)
@@ -115,7 +109,7 @@ const collapsible = (function()
                                 collapsible.register_new_collapser(collapser);
                             }
                         }
-                    }
+                    });
                 }
             }
         };

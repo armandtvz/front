@@ -88,10 +88,7 @@
 
 
     const sliders = document.querySelectorAll('input[type="range"]');
-
-    for (var i = 0; i < sliders.length; i++)
-    {
-        const slider = sliders[i];
+    sliders.forEach((slider, i) => {
         const slider_value = document.createElement('span');
 
         const min_label_element = document.createElement('span');
@@ -117,5 +114,5 @@
             update_slider(event.target, slider_value);
         }, 0);
         slider.oninput = debounced_slider_update;
-    }
+    });
 }());
