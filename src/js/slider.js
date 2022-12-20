@@ -38,7 +38,7 @@
     function count_decimals(value) {
         if (Math.floor(value.valueOf()) === value.valueOf()) return 0;
 
-        var str = value.toString();
+        let str = value.toString();
         if (str.indexOf(".") !== -1 && str.indexOf("-") !== -1) {
             return str.split("-")[1] || 0;
 
