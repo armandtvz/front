@@ -1,7 +1,7 @@
+'use strict';
 
 const modal = (function()
 {
-    'use strict';
     function register(modal_element)
     {
         modal_element.addEventListener('click', (event) =>
