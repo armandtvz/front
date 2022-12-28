@@ -66,7 +66,7 @@ const Toaster = function() {
         });
 
         // Setting the delay to -1 will disable autoclosing
-        delay = parseInt(toast.dataset.delay, 10);
+        delay = parseInt(toast.dataset.delay);
         if (delay !== -1) {
             window.setTimeout(() => {
                 remove(toast, 300);
