@@ -16,13 +16,13 @@ const collapsible = (function() {
     let collapsers_array = new Array();
 
 
-    function _find_and_add_collapsers() {
+    function find_and_add_collapsers() {
         collapsers = document.querySelectorAll('.collapse');
         collapsers.forEach((collapser, i) => {
             register_new_collapser(collapser);
         });
     }
-    _find_and_add_collapsers();
+    find_and_add_collapsers();
 
 
     function _collapse(e) {

@@ -2,24 +2,81 @@
 {% load static %}
 
 {% block body %}
-<button type="button" name="button" id="open-modal">Open modal</button>
-
-<div class="modal" id="modal-confirm-file-drawer-close" role="dialog">
-        <div class="modal-inner">
-                <span>Are you sure?</span>
-                <div class="break"></div>
-                <button type="button" name="button" class="btn primary">Yes</button>
-                <button type="button" name="button" class="btn secondary">No</button>
+        <button type="button" name="button" id="open-modal" data-open-modal="example-modal">Open modal</button>
+        <div class="modal" id="example-modal" role="dialog">
+                <div class="modal-inner">
+                        <span class="modal-text">Are you sure?</span>
+                        <div class="break"></div>
+                        <button type="button" name="button" class="btn primary">Yes</button>
+                        <button type="button" name="button" class="btn secondary" data-close-modal="example-modal">No</button>
+                </div>
         </div>
-</div>
+        <button type="button" name="button" id="open-modal" data-open-modal="example-modal-2">Open close buttons only modal</button>
+        <div class="modal close-buttons-only" id="example-modal-2" role="dialog">
+                <div class="modal-inner">
+                        <span class="modal-text">This modal cannot be closed by clicking outside the modal.</span>
+                        <div class="break"></div>
+                        <button type="button" name="button" class="btn primary">Yes</button>
+                        <button type="button" name="button" class="btn secondary" data-close-modal="example-modal-2">No</button>
+                        <button type="button" name="button" class="btn close-modal-btn" data-close-modal="example-modal-2">
+                                <span class="sr-only">Close</span>
+                        </button>
+                </div>
+        </div>
+        <button type="button" name="button" id="open-modal" data-open-modal="example-modal-3">Open another</button>
+        <div class="modal" id="example-modal-3" role="dialog">
+                <div class="modal-inner">
+                        <h2 class="">
+                                This is a modal.
+                        </h2>
+                        <p>
+                                Some more text.
+                        </p>
+                        <div class="break"></div>
+                        <button type="button" name="button" class="btn primary">Yes</button>
+                        <button type="button" name="button" class="btn secondary" data-close-modal="example-modal-3">No</button>
+                        <button type="button" name="button" class="btn close-modal-btn" data-close-modal="example-modal-3">
+                                <span class="sr-only">Close</span>
+                        </button>
+                </div>
+        </div>
+        <!-- Existing modal -->
+        <div class="modal" id="modal1">
+            <div class="modal-content">
+                <h1>Modal 1</h1>
+                <button data-close-modal="modal1">Close</button>
+            </div>
+        </div>
+
+        <button data-open-modal="modal1">Open Modal 1</button>
+
+        <!-- Button to add new modal -->
+        <button id="add-modal">Add New Modal</button>
+
 {% endblock body %}
 
 {% block extrajs %}
 <script>
-    const confirm_close_modal = document.getElementById('modal-confirm-file-drawer-close');
-    const open_modal_btn = document.getElementById('open-modal');
-    open_modal_btn.addEventListener('click', () => {
-        modal.open(confirm_close_modal);
+    // Your modal code with MutationObserver here
+
+    // Function to add a new modal dynamically
+    document.getElementById('add-modal').addEventListener('click', () => {
+        const new_modal = document.createElement('div');
+        new_modal.className = 'modal';
+        new_modal.id = 'dynamicModal';
+        new_modal.innerHTML = `
+            <div class="modal-content">
+                <h1>Dynamic Modal</h1>
+                <button data-close-modal="dynamicModal">Close</button>
+            </div>
+        `;
+
+        const new_open_btn = document.createElement('button');
+        new_open_btn.textContent = 'Open Dynamic Modal';
+        new_open_btn.dataset.openModal = 'dynamicModal';
+
+        document.body.appendChild(new_modal);
+        document.body.appendChild(new_open_btn);
     });
 </script>
 {% endblock extrajs %}

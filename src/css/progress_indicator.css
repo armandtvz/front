@@ -1,0 +1,53 @@
+.progress-indicator {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    max-width: 100vw;
+    overflow-x: auto;
+}
+
+.progress-indicator .step {
+    display: inline-flex;
+    border-top: 2px solid var(--bg-navbar);
+    white-space: nowrap;
+}
+
+.progress-indicator a,
+.progress-indicator span
+{
+    text-decoration: none;
+    padding: 8px 24px 8px 24px;
+}
+
+.progress-indicator a:focus {
+    outline-offset: 0px;
+    background-color: unset;
+}
+
+.progress-indicator .step:hover {
+    background-color: var(--bg-navbar);
+}
+
+.progress-indicator .step.complete {
+    border-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+}
+
+.dark-theme .progress-indicator .step.complete {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" stroke="%23fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="20 6 9 17 4 12"></polyline></svg>') !important;
+}
+
+.progress-indicator .step.current {
+    border-color: var(--color-primary);
+}
+
+.progress-indicator .step.incomplete {
+    border-color: var(--color-gray-dark);
+}
+
+.progress-indicator.border-left .step {
+    border-top: 0;
+    border-left: 2px solid var(--bg-navbar);
+}

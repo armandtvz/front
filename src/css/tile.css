@@ -1,0 +1,27 @@
+.tile {
+    background-color: var(--bg-navbar);
+    border: 1px solid var(--color-gray);
+    padding: 24px 32px;
+    display: block;
+}
+
+.tile.green {
+    border-color: var(--color-success);
+}
+
+.tile.red {
+    border-color: var(--color-error);
+}
+
+.tile.clickable {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.tile.clickable {
+    text-decoration: none;
+}
+
+.tile.clickable:hover {
+    background-color: var(--bg-navbar);
+}

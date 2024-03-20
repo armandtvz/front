@@ -1,0 +1,117 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<!-- TODO: Change data-uri -->
+<div class="container mt-10">
+        <div class="row">
+                <div class="col-xl-4">
+                        <form class="" action="" method="get">
+                                <div id="dropdown-one" class="dropdown" data-uri="http://localhost:8000/api/v1/filter/items/" data-search-param="q" data-max-results="100">
+                                        <label for="item-search">Item</label>
+                                        <select name="item" class="sr-only" tabindex="-1"></select>
+                                        <span class="inline-form-group">
+                                                <input type="text"
+                                                       id="item-search"
+                                                       autocomplete="off"
+                                                       placeholder="Type to search..."
+                                                       aria-controls="dropdown-results">
+                                                <button type="button" name="button" class="btn clear clear-selection" aria-controls="item-search">
+                                                        <span class="sr-only">Clear selection</span>
+                                                </button>
+                                        </span>
+                                        <div class="dropdown-results"
+                                             role="listbox"
+                                             aria-live="polite"
+                                             tabindex="-1">
+                                        </div>
+                                </div>
+                                <div id="dropdown-two" class="dropdown" data-uri="http://localhost:8000/api/v1/filter/items/" data-search-param="q">
+                                        <label for="item-search-2">Item</label>
+                                        <select name="item" class="sr-only" tabindex="-1">
+                                                <option value="288">Selected item</option>
+                                        </select>
+                                        <input type="search" id="item-search-2" autocomplete="off" placeholder="Type to search...">
+                                        <div class="dropdown-results" role="listbox" aria-live="polite" tabindex="-1"></div>
+                                </div>
+                                <div class="submit-row">
+                                        <button type="submit" name="button" class="btn secondary">Submit</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+</div>
+<div class="container mt-10">
+        <div class="row">
+                <div class="col-xl-4">
+                        <form class="" action="" method="get">
+                                <div id="dropdown-three" class="dropdown" data-uri="http://localhost:8000/api/v1/filter/items/" data-search-param="q" data-max-results="5" data-name="site">
+                                        <label for="item-search">Site</label>
+                                        <select name="site" class="sr-only" tabindex="-1">
+                                                <option value="288">Selected item</option>
+                                        </select>
+                                        <span class="inline-form-group">
+                                                <input type="text"
+                                                       id="item-search-3"
+                                                       autocomplete="off"
+                                                       placeholder="Type to search..."
+                                                       aria-controls="dropdown-results">
+                                                <button type="button" name="button" class="btn clear clear-selection" aria-controls="item-search">
+                                                        <span class="sr-only">Clear selection</span>
+                                                </button>
+                                        </span>
+                                        <div class="dropdown-results"
+                                             role="listbox"
+                                             aria-live="polite"
+                                             tabindex="-1">
+                                        </div>
+                                </div>
+                                <div id="dropdown-four" class="dropdown" data-uri="http://localhost:8000/api/v1/filter/items/" data-search-param="q" data-max-results="5" data-chained='["dropdown-three"]' data-name="device">
+                                        <label for="item-search">Device</label>
+                                        <select name="device" class="sr-only" tabindex="-1"></select>
+                                        <span class="inline-form-group">
+                                                <input type="text"
+                                                       id="item-search-4"
+                                                       autocomplete="off"
+                                                       placeholder="Type to search..."
+                                                       aria-controls="dropdown-results">
+                                                <button type="button" name="button" class="btn clear clear-selection" aria-controls="item-search">
+                                                        <span class="sr-only">Clear selection</span>
+                                                </button>
+                                        </span>
+                                        <div class="dropdown-results"
+                                             role="listbox"
+                                             aria-live="polite"
+                                             tabindex="-1">
+                                        </div>
+                                </div>
+                                <div class="submit-row">
+                                        <button type="submit" name="button" class="btn secondary">Submit</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+</div>
+<div class="container mt-10">
+        <div class="row">
+                <div class="col-xl-4">
+                        <form class="" action="" method="get">
+                                <div id="dropdown-five" class="dropdown" data-uri="http://localhost:8000/api/v1/filter/items/" data-search-param="q">
+                                        <label for="item-search-5">Item</label>
+                                        <select name="item" class="sr-only" tabindex="-1" multiple="true">
+                                                <option value="" selected></option>
+                                                <option value="288" selected>Selected item</option>
+                                        </select>
+                                        <input type="search" id="item-search-5" autocomplete="off" placeholder="Type to search...">
+                                        <div class="dropdown-results" role="listbox" aria-live="polite" tabindex="-1"></div>
+                                </div>
+                                <p class="helptext">This is just some sample help text.</p>
+                                <div class="submit-row">
+                                        <button type="submit" name="button" class="btn secondary">Submit</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+</div>
+{% endblock body %}

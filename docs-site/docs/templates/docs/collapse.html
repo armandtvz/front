@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body %}
-        <div class="container pt-10 pb-10">
+        <div class="container mt-10">
                 <a href="" class="collapse" aria-expanded="false">Parent 2</a>
                 <ul>
                         <li>
@@ -33,12 +33,33 @@
                         </li>
                 </ul>
         </div>
-        <div class="container">
+        <div class="container mt-10">
                 <button class="collapse" aria-expanded="false">Example</button>
                 <article class="story pl-0">
                         <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor aliquet magna vel mollis. Duis ac sodales turpis, non ornare libero. Quisque urna mi, facilisis nec orci vulputate, tempus lacinia eros. Etiam ullamcorper, neque vitae ullamcorper dictum, est purus ullamcorper augue, quis scelerisque nunc tortor et nisi. Integer et laoreet nunc. Nam ut rhoncus odio. Vestibulum eleifend dolor sed quam hendrerit, et volutpat mi consequat. Curabitur porttitor risus justo, vitae dictum ligula ullamcorper vitae. Praesent viverra elit eu nunc aliquet malesuada nec eu quam. Integer tempor faucibus metus sed viverra. Nulla dignissim, sapien vitae condimentum molestie, mauris massa laoreet orci, et rhoncus sapien mauris sit amet ante. Morbi vulputate lobortis velit, at bibendum lorem suscipit ut.
                         </p>
                 </article>
+        </div>
+        <div class="container mt-10">
+                <h2>
+                        Collapse group
+                </h2>
+                <button class="btn secondary collapse chevron-down" aria-expanded="false">Example</button>
+                <div class="collapse-group">
+                        <article class="story pl-0">
+                                <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor aliquet magna vel mollis. Duis ac sodales turpis, non ornare libero. Quisque urna mi, facilisis nec orci vulputate, tempus lacinia eros. Etiam ullamcorper, neque vitae ullamcorper dictum, est purus ullamcorper augue, quis scelerisque nunc tortor et nisi. Integer et laoreet nunc. Nam ut rhoncus odio. Vestibulum eleifend dolor sed quam hendrerit, et volutpat mi consequat. Curabitur porttitor risus justo, vitae dictum ligula ullamcorper vitae. Praesent viverra elit eu nunc aliquet malesuada nec eu quam. Integer tempor faucibus metus sed viverra. Nulla dignissim, sapien vitae condimentum molestie, mauris massa laoreet orci, et rhoncus sapien mauris sit amet ante. Morbi vulputate lobortis velit, at bibendum lorem suscipit ut.
+                                </p>
+                        </article>
+                </div>
+                <button class="btn secondary collapse chevron-down" aria-expanded="false">Example</button>
+                <div class="collapse-group">
+                        <article class="story pl-0">
+                                <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor aliquet magna vel mollis. Duis ac sodales turpis, non ornare libero. Quisque urna mi, facilisis nec orci vulputate, tempus lacinia eros. Etiam ullamcorper, neque vitae ullamcorper dictum, est purus ullamcorper augue, quis scelerisque nunc tortor et nisi. Integer et laoreet nunc. Nam ut rhoncus odio. Vestibulum eleifend dolor sed quam hendrerit, et volutpat mi consequat. Curabitur porttitor risus justo, vitae dictum ligula ullamcorper vitae. Praesent viverra elit eu nunc aliquet malesuada nec eu quam. Integer tempor faucibus metus sed viverra. Nulla dignissim, sapien vitae condimentum molestie, mauris massa laoreet orci, et rhoncus sapien mauris sit amet ante. Morbi vulputate lobortis velit, at bibendum lorem suscipit ut.
+                                </p>
+                        </article>
+                </div>
         </div>
 {% endblock body %}

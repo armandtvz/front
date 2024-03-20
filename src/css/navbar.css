@@ -72,7 +72,6 @@
     text-align: left;
     font-size: var(--nav-font-size);
     text-decoration: none;
-    cursor: pointer;
     transition: var(--btn-transition-time);
     transition-property: background-color;
 }
@@ -92,11 +91,23 @@
     padding: 18px 22px;
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
     white-space: nowrap;
     line-height: normal;
     transition: var(--btn-transition-time);
     transition-property: background-color;
+}
+
+.navbar li p {
+    font-size: var(--nav-font-size);
+    display: inline-block;
+    padding: 18px 22px;
+    color: inherit;
+}
+
+.navbar li a,
+.navbar li button
+{
+    cursor: pointer;
 }
 
 /* TODO REVIEW active */
@@ -159,7 +170,7 @@
 /* Vertical nav */
 
 .navbar.y {
-    padding: 2vh 0 10vh 0;
+    padding: 2vh 0 2vh 0;
     margin-bottom: 15px;
     position: fixed;
     top: var(--nav-x-height);
@@ -167,6 +178,9 @@
     overflow-y: auto;
     height: 100vh;
     width: var(--nav-y-width);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar.y li {
@@ -174,7 +188,8 @@
 }
 
 .navbar.y li a,
-.navbar.y li button
+.navbar.y li button,
+.navbar.y li p
 {
     display: block;
     padding: 12px 24px;
@@ -194,8 +209,6 @@
 .navbar.y li > ol a,
 .navbar.y li > ol button
 {
-    /* padding-left: 40px; */
-    /* padding-left: 54px; */
     padding-left: 50px;
 }
 
@@ -212,7 +225,6 @@
 .navbar.y > ul,
 .navbar.y > ol
 {
-    display: block;
     margin: 0;
     padding-left: 0;
 }
@@ -234,7 +246,12 @@
 
 
 
-
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
 
 .nav-list li a:hover,
 .nav-list li button:hover

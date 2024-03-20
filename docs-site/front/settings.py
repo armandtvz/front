@@ -26,7 +26,7 @@ SECRET_KEY = 'insecure-etmi14x0l2vz4q6$rgpb2a3xx!ee95+!$n20gom4q)si@2rb%p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition

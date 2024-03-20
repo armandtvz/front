@@ -1,0 +1,51 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-6">
+                                <h1 class="display-2">
+                                        Component
+                                </h1>
+                                <button id="btn" type="button" name="button" class="btn secondary">
+                                        Button
+                                </button>
+                        </div>
+                </div>
+        </div>
+        <div class="spacer-5"></div>
+{% endblock body %}
+
+
+
+
+{% block extrajs %}
+<script type="text/javascript">
+        'use strict';
+        (function() {
+                const btn_component = new Component({
+                    lock_click: true,
+                    busy_on_click: true,
+                    busy: (component, args) => {
+                        console.log('Allo');
+                        component.element.textContent += ' ...';
+                    },
+                    available: (component, args) => {
+                        component.element.textContent = component.element.textContent.replace(
+                            ' ...', ''
+                        );
+                    },
+                    element_id: 'btn',
+                    click: async (event) => {
+                        component.element.disabled = true;
+                        await front_utils.stall(500);
+                        component.element.disabled = false;
+                    },
+                });
+        }());
+</script>
+{% endblock extrajs %}

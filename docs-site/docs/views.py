@@ -25,6 +25,10 @@ def forms(request):
     return render(request, 'docs/forms.html')
 
 
+def js_forms(request):
+    return render(request, 'docs/js_forms.html')
+
+
 def icons(request):
     return render(request, 'docs/icons.html')
 
@@ -103,3 +107,35 @@ def pagination(request):
 
 def breadcrumbs(request):
     return render(request, 'docs/breadcrumbs.html')
+
+
+def progress_indicator(request):
+    return render(request, 'docs/progress_indicator.html')
+
+
+def big_radio(request):
+    return render(request, 'docs/big_radio.html')
+
+
+def component(request):
+    return render(request, 'docs/component.html')
+
+
+def show_hide_password(request):
+    return render(request, 'docs/show_hide_password.html')
+
+
+def tile(request):
+    return render(request, 'docs/tile.html')
+
+
+def select_all(request):
+    return render(request, 'docs/select_all.html')
+
+
+def select(request):
+    return render(request, 'docs/select.html')
+
+
+def lazy_images(request):
+    return render(request, 'docs/lazy_images.html')

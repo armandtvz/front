@@ -10,10 +10,11 @@
                 <div class="row">
                         <div class="col-xl-6 offset-xl-2">
                                 <form action="" method="post" novalidate>
-                                        <div class="form-error-alert top">
-                                                Please correct the errors below
-                                        </div>
-
+                                        <ul class="errorlist nonfield">
+                                                <li>
+                                                        Please correct the errors below
+                                                </li>
+                                        </ul>
                                         <label for="first-name">First name</label>
                                         <input id="first-name" type="text" name="first_name" required>
 
@@ -38,6 +39,20 @@
                                                         Required field
                                                 </li>
                                         </ul>
+
+                                        <label for="" class="">
+                                                Threshold
+                                                (optional)
+                                        </label>
+                                        <ul class="errorlist"><li>Ensure this value is greater than or equal to 0.</li></ul>
+                                        <span class="inline-form-group">
+                                                <input type="number" name="" value="500" min="0" data-addon-text="seconds" id="" class="before-addon">
+                                                <span class="input-addon">
+                                                        seconds
+                                                </span>
+                                        </span>
+
+
 
                                         <label for="cars">Cars</label>
                                         <select id="cars" name="cars">
@@ -142,9 +157,11 @@
 
                         <div class="col-xl-6 offset-xl-2">
                                 <form class="small-form" action="" method="post" id="front-form-1">
-                                        <div class="form-error-alert top">
-                                                Please correct the errors below
-                                        </div>
+                                        <ul class="errorlist nonfield">
+                                                <li>
+                                                        Please correct the errors below.
+                                                </li>
+                                        </ul>
 
                                         <label for="">First name</label>
                                         <input type="text" name="" value="Armandt" required>
@@ -234,9 +251,11 @@
                                                 </div>
                                         </fieldset>
 
-                                        <div class="form-error-alert left">
-                                                Please correct the errors above
-                                        </div>
+                                        <ul class="errorlist nonfield">
+                                                <li>
+                                                        Please correct the errors above.
+                                                </li>
+                                        </ul>
 
                                         <fieldset>
                                                 <button type="button" name="button" class="btn secondary">Cancel</button>
@@ -267,6 +286,13 @@
                                                 <span class="inline-form-group">
                                                         <input id="percent_addon" type="email" name="percent_addon" required>
                                                         <span class="input-addon percentage-addon">%</span>
+                                                </span>
+                                        </div>
+                                        <div class="input-container">
+                                                <label for="country_code_prefix">Inline form group with country code prefix</label>
+                                                <span class="inline-form-group">
+                                                        <span class="input-addon">+27</span>
+                                                        <input id="country_code_prefix" type="tel" name="country_code_prefix" required>
                                                 </span>
                                         </div>
                                 </form>

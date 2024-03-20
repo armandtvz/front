@@ -87,3 +87,32 @@ const Toaster = function() {
         add: add,
     };
 }();
+
+
+
+
+// (function() {
+//     let toasts = [
+//         {
+//             text: 'This is a toast message.',
+//             css_class: 'success',
+//         },
+//         {
+//             text: 'This is a toast message.',
+//             css_class: 'error',
+//         },
+//     ];
+//     toasts = JSON.stringify(toasts);
+//     sessionStorage.setItem('toasts', toasts);
+// }());
+(function() {
+    let toasts = sessionStorage.getItem('toasts');
+    toasts = JSON.parse(toasts);
+    // TODO check that the correct keys exist for the toast
+    if (toasts) {
+        toasts.forEach((toast, i) => {
+            Toaster.add({...toast});
+        });
+    }
+    sessionStorage.removeItem('toasts');
+}());

@@ -102,12 +102,15 @@
 }
 
 .sidenav li a,
-.sidenav li button
+.sidenav li button,
+.sidenav li p
 {
     --nav-font-size: 25px;
 }
 
-.sidenav li a {
+.sidenav li a,
+.sidenav li p
+{
     text-decoration: none;
     font-size: var(--nav-font-size);
     color: var(--text-color);
@@ -164,14 +167,19 @@
 /* TODO REVIEW */
 .sidenav li a,
 .sidenav li button,
+.sidenav li p,
+.sidenav li span,
 .navbar.sidenav li a,
 .navbar.sidenav li button,
+.navbar.sidenav li p,
+.navbar.sidenav li span,
 .navbar .sidenav li a,
-.navbar .sidenav li button
+.navbar .sidenav li button,
+.navbar .sidenav li p,
+.navbar .sidenav li span
 {
     margin: 0;
     display: inline-block;
-    /* width: auto; */
     width: 100%;
     line-height: normal;
     padding: 10px 40px;
@@ -191,7 +199,6 @@
 .sidenav .header .header-button {
     display: flex;
     vertical-align: middle;
-
     justify-content: space-between;
 }
 
@@ -490,27 +497,15 @@ why a Web Animations API / a setTimeout solution is not used.
 
 
 
-/* TODO REVIEW */
-.navbar.y > ol,
-.navbar.y > ul
-{
-    margin-top: 64px;
-}
-
-@media (max-width: 576px) {
-    .navbar.y > ol,
-    .navbar.y > ul
-    {
-        margin-top: 0;
-        padding-bottom: 20vh;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-icon-btn {
         padding: 8px !important;
     }
-    .sidenav li a, .sidenav li button {
+    .sidenav li a,
+    .sidenav li button,
+    .sidenav li p,
+    .sidenav li span    
+    {
         --nav-font-size: 20px;
     }
 }

@@ -40,7 +40,7 @@
 }
 
 .toast.error {
-    background-color: #cc0000;
+    background-color: #CA2128;
 }
 
 .toast.info {
@@ -48,7 +48,7 @@
 }
 
 .toast.warning {
-    background-color: #cd8500;
+    background-color: #ba4e00;
 }
 
 .toast button {

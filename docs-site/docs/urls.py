@@ -15,6 +15,7 @@ urlpatterns = [
     path('collapse/', views.collapse, name='collapse'),
     path('colors/', views.colors, name='colors'),
     path('forms/', views.forms, name='forms'),
+    path('js_forms/', views.js_forms, name='js_forms'),
     path('icons/', views.icons, name='icons'),
     path('img/', views.img, name='img'),
     path('loader/', views.loader, name='loader'),
@@ -35,6 +36,14 @@ urlpatterns = [
     path('chips/', views.chips, name='chips'),
     path('pagination/', views.pagination, name='pagination'),
     path('breadcrumbs/', views.breadcrumbs, name='breadcrumbs'),
+    path('progress-indicator/', views.progress_indicator, name='progress_indicator'),
+    path('big-radio/', views.big_radio, name='big_radio'),
+    path('component/', views.component, name='component'),
+    path('show_hide_password/', views.show_hide_password, name='show_hide_password'),
+    path('tile/', views.tile, name='tile'),
+    path('select_all/', views.select_all, name='select_all'),
+    path('select/', views.select, name='select'),
+    path('lazy_images/', views.lazy_images, name='lazy_images'),
 ]
 
 

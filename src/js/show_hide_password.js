@@ -1,19 +1,40 @@
 'use strict';
 (function() {
-    const show_password_btn = document.getElementById('show_password_btn');
-    const password_input = document.querySelector('input[type="password"]');
+    const show_password_buttons = document.querySelectorAll('[data-toggle-show-password-input]');
+    show_password_buttons.forEach((btn, i) => {
+        let event_name = undefined;
+        if (btn.tagName === 'button') {
+            event_name = 'click';
 
-    if (show_password_btn && password_input) {
-        show_password_btn.addEventListener('click', (event) => {
-            if (password_input.type === 'password') {
-                password_input.type = 'text';
-                show_password_btn.ariaPressed = true;
-                show_password_btn.textContent = 'Hide password';
+        } else if (btn.tagName === 'input') {
+            event_name = 'change';
+
+        } else {
+            event_name = 'click';
+        }
+        const input_id = btn.dataset.toggleShowPasswordInput;
+        const input = document.getElementById(input_id);
+
+        btn.addEventListener(event_name, (event) => {
+            if (! input) {
+                console.warning('No input found for toggle show/hide password.');
+                return;
+            }
+            if (input.type === 'password') {
+                input.type = 'text';
+                btn.ariaPressed = true;
+                btn.classList.add('showing-password');
+                if (btn.textContent) {
+                    btn.textContent = 'Hide';
+                }
             } else {
-                password_input.type = 'password';
-                show_password_btn.ariaPressed = false;
-                show_password_btn.textContent = 'Show password';
+                input.type = 'password';
+                btn.ariaPressed = false;
+                btn.classList.remove('showing-password');
+                if (btn.textContent) {
+                    btn.textContent = 'Show';
+                }
             }
         });
-    }
+    });
 }());

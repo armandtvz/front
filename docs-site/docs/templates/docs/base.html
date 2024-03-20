@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="{% static 'css/animations.css' %}">
         <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/toast.css' %}">
         <link rel="stylesheet" href="{% static 'css/loading.css' %}">
         <link rel="stylesheet" href="{% static 'css/utils.css' %}">
         <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
@@ -34,21 +35,24 @@
         <link rel="stylesheet" href="{% static 'css/pagination.css' %}">
         <link rel="stylesheet" href="{% static 'css/img.css' %}">
 
-
         <!-- Preconnect -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
         <!-- Other CSS -->
         <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+        <link rel="stylesheet" href="{% static 'css/show_hide_password.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big_radio.css' %}">
         <link rel="stylesheet" href="{% static 'css/slider.css' %}">
         <link rel="stylesheet" href="{% static 'css/code.css' %}">
         <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tile.css' %}">
         <link rel="stylesheet" href="{% static 'css/modal.css' %}">
-        <link rel="stylesheet" href="{% static 'css/toast.css' %}">
         <link rel="stylesheet" href="{% static 'css/tasks.css' %}">
         <link rel="stylesheet" href="{% static 'css/status.css' %}">
         <link rel="stylesheet" href="{% static 'css/chips.css' %}">
+        <link rel="stylesheet" href="{% static 'css/progress_indicator.css' %}">
+        <link rel="stylesheet" href="{% static 'css/select.css' %}">
 
 
         <!-- Typography -->
@@ -88,6 +92,9 @@
 
         </noscript>
 
+        <script src="{% static 'js/utils.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/websockets.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/detect_js.js' %}" charset="utf-8"></script>
 
         {% block head %}
         {% endblock head %}
@@ -97,6 +104,8 @@
 
 
 <body>
+        <script src="{% static 'js/theme.js' %}" charset="utf-8"></script>
+
         <a class="sr-only" href="#main">Skip to main content</a>
 
         <button type="button" name="button" id="dark-light-toggle" class="btn clear small">Dark</button>
@@ -110,14 +119,24 @@
         {% block body %}
         {% endblock body %}
 
-        <script src="{% static 'js/utils.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/global.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/exceptions.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/component.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/toast.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/request.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/slider.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/forms.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/select_all.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/select.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/show_hide_password.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/big_radio.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/colors.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/sidenav.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/collapse.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/buttons.js' %}" charset="utf-8"></script>
         <script src="{% static 'js/modal.js' %}" charset="utf-8"></script>
-        <script src="{% static 'js/toast.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/timetable.js' %}" charset="utf-8"></script>
+        <script src="{% static 'js/lazy_images.js' %}" charset="utf-8"></script>
 
         {% block extrajs %}
         {% endblock extrajs %}

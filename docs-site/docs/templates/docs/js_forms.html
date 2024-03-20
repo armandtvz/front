@@ -1,0 +1,78 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="spacer-3"></div>
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-6 offset-xl-2">
+                                <form id="form" action="" method="post" novalidate>
+                                        <div class="input-container">
+                                                <label for="email">Email</label>
+                                                <span class="inline-form-group">
+                                                        <input id="email" type="email" name="email" required>
+                                                        <span class="input-addon">@example.com</span>
+                                                </span>
+                                        </div>
+                                        <label for="first_name">First name</label>
+                                        <input id="first_name" type="text" name="first_name" required>
+                                        <div class="input-container">
+                                                <label for="last_name">Last name</label>
+                                                <input id="last_name" type="text" name="last_name" required>
+                                        </div>
+                                        <div class="submit-row">
+                                                <button type="button" name="button" id="submit" class="btn primary">Send</button>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+{% endblock body %}
+
+
+
+
+{% block extrajs %}
+<script type="text/javascript">
+        forms.add_errors({
+            input: document.getElementById('email'),
+            errors: ['This is some random error.'],
+        });
+        forms.add_errors({
+            input: document.getElementById('first_name'),
+            errors: [
+                'This field cannot be blank.',
+                'You must provide a first name.',
+            ],
+        });
+        forms.add_errors({
+            input: document.getElementById('last_name'),
+            errors: ['This is some random error.'],
+        });
+        forms.add_form_errors({
+            form: document.getElementById('form'),
+            errors: ['This a form-level error.'],
+        });
+
+        window.setTimeout(() => {
+                forms.add_errors({
+                    input: document.getElementById('email'),
+                    errors: [
+                        'And another error.',
+                        'This is some random error.',
+                    ],
+                });
+
+                forms.add_form_errors({
+                    form: document.getElementById('form'),
+                    errors: [
+                        'And another error.',
+                        'This a form-level error.',
+                    ],
+                });
+        }, 5000);
+</script>
+{% endblock extrajs %}

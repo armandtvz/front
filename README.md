@@ -1,6 +1,6 @@
 # front
 A simple, lightweight front-end framework. This project is heavily influenced
-by IBM's Carbon.
+by IBM's Carbon. 143.4 kB minified. 28 kB minified and gzipped.
 
 
 
@@ -9,6 +9,7 @@ by IBM's Carbon.
   micro framework.
 - I needed a framework for myself that is highly opinionated so I can get work
   done faster.
+- I needed a collection of JS helpers.
 
 
 
@@ -19,6 +20,16 @@ This framework uses [Normalize.css][3] as a CSS reset (v8).
 
 ## Grid
 The Bootstrap grid is used (Bootstrap 5).
+
+
+## Components
+
+A list of components can be found in the docs.
+
+However, I'm leaving a small note here on "transfer lists":
+
+- Front will not implement the transfer list component -- such a component
+  is only suitable for use on non-mobile screen sizes.
 
 
 
@@ -44,9 +55,9 @@ The Bootstrap grid is used (Bootstrap 5).
 1. Add `front_head.min.js` before the closing `<head>` tag if you need browser
    JS detection or if you need a constant that stores the detected websocket
    protocol that should be used (`wss:` when `https:` and `ws:` when `http:`).
-   The value is stored in `ws.scheme`:
+   The value is stored in `ws_scheme`:
    ```javascript
-   console.log(ws.scheme);
+   console.log(ws_scheme);
    ```
    ```html
    <head>

@@ -4,6 +4,9 @@
     --link-focus-outline: 2px solid var(--text-color);
     --small-btn-padding: 7px 50px 8px 16px;
     --btn-padding: var(--small-btn-padding);
+
+    --btn-padding: 7px 31px 7px 15px;
+    --small-btn-padding: var(--btn-padding);
 }
 
 a.btn,
@@ -121,6 +124,13 @@ a.btn.clear,
     cursor: not-allowed;
     color: white;
     box-shadow: 0;
+}
+
+.btn.ghost:disabled {
+    background-color: transparent;
+    color: var(--text-color);
+    text-align: left;
+    padding: 16px 25px;
 }
 
 
@@ -305,10 +315,16 @@ input[type='submit'].btn.danger:focus
     position: relative; /* So the loader can be absolutely positioned */
 }
 
-.btn.loading .loader {
-    position: absolute;
+.btn.loading .btn-text {
+    margin-right: 16px;
+}
+
+.btn.loading .loader,
+.btn.loading .inline-loader
+{
+    /* position: absolute;
     top: 25%;
-    right: 8%;
+    right: 8%; */
     margin-bottom: 0px;
     vertical-align: baseline;
     display: inline-flex;
@@ -318,7 +334,14 @@ input[type='submit'].btn.danger:focus
     border-top: 3px solid transparent;
 }
 
-.btn.clear.loading .loader {
+.btn.loading .inline-loader {
+    width: 18px;
+    height: 18px;
+}
+
+.btn.clear.loading .loader,
+.btn.clear.loading .inline-loader
+{
     border-top: 3px solid var(--color-gray);
 }
 
@@ -438,4 +461,11 @@ input[type='submit'].btn.danger:focus
 .fab:hover
 {
     box-shadow: 0 0 0 .2rem var(--color-focus-shadow);
+}
+
+
+
+
+.loading-btn-loader {
+    display: none;
 }

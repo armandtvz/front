@@ -30,8 +30,11 @@
 
     /* states */
     --color-success: #28a745;
+    --color-success-dark: #1e7e34;
+    --color-success-darker: #19692c;
+
     --color-error: #9c1421;
-    --color-warning: yellow;
+    --color-warning: #ba4e00;
 
     /* text */
     --text-color: var(--color-dark);
@@ -44,12 +47,14 @@
     --bg-color: #ffffff;
     --bg-color-darker: #e6e6e6;
     --bg-input: #ffffff;
-    --bg-error: var(--color-error);
+    --bg-error: #fdf6f5;
+    --bg-success: #99dc9d;
     --bg-code: var(--bg-navbar);
     --bg-navbar: var(--color-light);
     --bg-inverse: #161616;
     --bg-nav-btn-hover: var(--color-light);
     --bg-link-focus: var(--bg-color);
+    --bg-highlight: #f1f1f1;
 
     /* forms */
     --shadow-opacity: 0.5;
@@ -62,6 +67,8 @@
 
     /* tables */
     --color-table-line-borders: #e0e0e0;
+    --color-table-odds: var(--bg-color);
+    --color-table-evens: var(--bg-color);
 }
 
 
@@ -80,11 +87,13 @@
     --bg-color-darker: #000;
     --bg-inverse: var(--color-light);
     --bg-error: var(--bg-input);
+    --bg-success: #99dc9d;
     --bg-navbar: #1f1f1f;
     --bg-code: var(--bg-navbar);
     --bg-nav-btn-hover: var(--color-gray);
     --bg-input: var(--bg-navbar);
     --bg-link-focus: #4d4d4d;
+    --bg-highlight: #0b0b0b;
 
     /* text */
     --text-color: var(--color-light);
@@ -102,4 +111,5 @@
     /* tables */
     --color-table-line-borders: #383838;
     --color-table-odds: var(--bg-color);
+    --color-table-evens: var(--bg-color);
 }

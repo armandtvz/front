@@ -57,7 +57,13 @@ td {
 }
 
 tr:nth-child(2n) {
-    background-color: var(--bg-color);
+    /* Evens */
+    background-color: var(--color-table-evens);
+}
+
+tr:nth-child(2n+1) {
+    /* Odds */
+    background-color: var(--color-table-odds);
 }
 
 th, td {

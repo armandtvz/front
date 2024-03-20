@@ -1,0 +1,28 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<div class="container mt-10">
+        <div class="row">
+                <div class="col-xl-12">
+                        <div class="custom-checkbox-wrapper">
+                                <input id="select-everything" type="checkbox" name="select-everything">
+                                <label for="select-everything">Select everything</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                                <input id="select-all" type="checkbox" name="select-all">
+                                <label for="select-all">Select all</label>
+                        </div>
+                        <div class="mt-3">
+                                {% for i in '12345' %}
+                                <div class="custom-checkbox-wrapper mt-0 mb-0">
+                                        <input id="row-select-{{ forloop.counter }}" class="row-select" type="checkbox" name="row-select-{{ forloop.counter }}">
+                                        <label for="row-select-{{ forloop.counter }}">Select me</label>
+                                </div>
+                                {% endfor %}
+                        </div>
+                </div>
+        </div>
+</div>
+{% endblock body %}

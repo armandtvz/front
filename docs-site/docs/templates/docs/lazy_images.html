@@ -1,0 +1,22 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<div class="container">
+        <div class="row">
+                <div class="col-xl-12">
+                        <img data-lazy-src="http://source.unsplash.com/random/480x640" alt="" width="480" height="640">
+                        <div class="modal" id="modal1" role="dialog">
+                                <div class="modal-inner">
+                                        <div class="container-fluid">
+                                                <img data-lazy-src="http://source.unsplash.com/random/640x480" alt="" width="640" height="480">
+                                                <button data-close-modal="modal1" class="mt-2">Close</button>
+                                        </div>
+                                </div>
+                        </div>
+                        <button data-open-modal="modal1" class="mt-2">Open Modal 1</button>
+                </div>
+        </div>
+</div>
+{% endblock body %}

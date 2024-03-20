@@ -1,10 +1,5 @@
 'use strict';
-const ws = {};
-(function() {
-    if (window.location.protocol === 'https:') {
-        ws.scheme = 'wss://';
-    } else {
-        ws.scheme = 'ws://';
-    }
-}());
-Object.freeze(ws);
+window.location.websocket_scheme = 'ws://';
+if (window.location.protocol === 'https:') {
+    window.location.websocket_scheme = 'wss://';
+}

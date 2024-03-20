@@ -1,13 +1,26 @@
 {% extends 'docs/base.html' %}
 {% load static %}
 
-{% block body %}
 
+
+
+{% block body %}
         <div class="container">
                 <div class="row">
                         <div class="col-xl-12">
                                 <div class="spacer-4"></div>
-                                <h2 class="mt-0">Round</h2>
+                                <h2>Loading states</h2>
+                                <button type="button" class="btn primary" id="loading-btn">
+                                        Primary button
+                                </button>
+                                <div class="loading-btn-loader">loading</div>
+
+
+                                <div class="spacer-1"></div>
+
+
+                                <div class="spacer-4"></div>
+                                <h2 class="mt-0">Dropup</h2>
 
                                 <div class="dropup-menu">
                                         <div id="dropup" class="dropup" aria-hidden="true">
@@ -15,19 +28,19 @@
                                                         <span class="sr-only">
                                                                 Add
                                                         </span>
-                                                        Zone
+                                                        Item 1
                                                 </button>
                                                 <button type="button" class="btn secondary">
                                                         <span class="sr-only">
                                                                 Add
                                                         </span>
-                                                        Line
+                                                        Item 2
                                                 </button>
                                                 <button type="button" class="btn secondary">
                                                         <span class="sr-only">
                                                                 Add
                                                         </span>
-                                                        Direction
+                                                        Item 3
                                                 </button>
                                         </div>
                                         <button type="button" class="btn primary" data-open-dropup="dropup">
@@ -37,7 +50,6 @@
                         </div>
                 </div>
         </div>
-
         <div class="container">
                 <div class="row">
                         <div class="col-xl-12">
@@ -50,8 +62,9 @@
                                 <button type="button" class="btn secondary">Secondary</button>
                                 <div class="spacer-1"></div>
 
-                                <button type="button" class="btn clear">Clear</button>
-                                <div class="spacer-1"></div>
+                                <!-- TODO -->
+                                <!-- <button type="button" class="btn clear">Clear</button>
+                                <div class="spacer-1"></div> -->
 
                                 <input type="submit" name="" class="btn primary">
                                 <div class="spacer-1"></div>
@@ -73,35 +86,62 @@
 
 
 
+
+                                <div class="spacer-4"></div>
+                                <h2 class="mt-0">Disabled</h2>
+                                <button type="button" class="btn primary" disabled>Primary button</button>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn secondary" disabled>Secondary</button>
+                                <div class="spacer-1"></div>
+
+                                <!-- TODO -->
+                                <!-- <button type="button" class="btn clear">Clear</button>
+                                <div class="spacer-1"></div> -->
+
+                                <input type="submit" name="" class="btn primary" disabled>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn danger" disabled>Danger</button>
+                                <input type="submit" name="" value="Danger submit" class="btn danger" disabled>
+                                <div class="spacer-1"></div>
+
+                                <button type="button" class="btn ghost" disabled>Ghost</button>
+
+
+
+
+
+
                                 <div class="spacer-4"></div>
                                 <h2>Loading states</h2>
                                 <button type="button" class="btn primary loading">
-                                        Primary button
-                                        <span class="loader"></span>
+                                        <span class="btn-text">Primary button</span>
+                                        <span class="inline-loader"></span>
                                 </button>
                                 <div class="spacer-1"></div>
 
                                 <button type="button" class="btn secondary loading">
-                                        Secondary
-                                        <span class="loader"></span>
+                                        <span class="btn-text">Secondary</span>
+                                        <span class="inline-loader"></span>
                                 </button>
                                 <div class="spacer-1"></div>
 
                                 <button type="button" class="btn clear loading">
-                                        Clear
-                                        <span class="loader"></span>
+                                        <span class="btn-text">Clear</span>
+                                        <span class="inline-loader"></span>
                                 </button>
                                 <div class="spacer-1"></div>
 
                                 <button type="button" class="btn loading" disabled>
-                                        Disabled
-                                        <span class="loader"></span>
+                                        <span class="btn-text">Disabled</span>
+                                        <span class="inline-loader"></span>
                                 </button>
                                 <div class="spacer-1"></div>
 
                                 <button type="button" class="btn danger loading">
-                                        Danger
-                                        <span class="loader"></span>
+                                        <span class="btn-text">Danger</span>
+                                        <span class="inline-loader"></span>
                                 </button>
 
 

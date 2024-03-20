@@ -1,0 +1,64 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+
+
+
+{% block body %}
+        <div class="container">
+                <div class="row">
+                        <div class="col-xl-6">
+                                <h1 class="display-2">
+                                        Big radio
+                                </h1>
+                                <fieldset class="big-radio-fieldset">
+                                        <legend>Choose your subscription</legend>
+                                        <div class="big-radio">
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-1" type="radio" value="electric_blue" name="radio-1" checked>
+                                                        <label for="radio-1">
+                                                                <span class="dot"></span>
+                                                                <span class="">
+                                                                        <div class="text">
+                                                                                Starter
+                                                                        </div>
+                                                                        <div class="description-text">
+                                                                                Good for those who are new to the platform.
+                                                                        </div>
+                                                                </span>
+                                                                <span class="right-text">
+                                                                        USD 500.00
+                                                                </span>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <div class="big-radio">
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-2" type="radio" value="ferrari_red" name="radio-1">
+                                                        <label for="radio-2">
+                                                                <span class="dot"></span>
+                                                                <span class="text">Professional</span>
+                                                                <span class="right-text">
+                                                                        USD 1000.00
+                                                                </span>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <div class="big-radio">
+                                                <div class="custom-radio-button-wrapper">
+                                                        <input id="radio-3" type="radio" value="red" name="radio-1">
+                                                        <label for="radio-3">
+                                                                <span class="dot"></span>
+                                                                <span class="text">Enterprise</span>
+                                                                <span class="right-text">
+                                                                        Enquire
+                                                                </span>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                </fieldset>
+                        </div>
+                </div>
+        </div>
+        <div class="spacer-5"></div>
+{% endblock body %}

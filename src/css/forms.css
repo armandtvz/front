@@ -73,6 +73,10 @@ label, legend {
     padding-bottom: 10px;
 }
 
+label {
+    cursor: pointer;
+}
+
 fieldset legend {
     margin-top: 0;
     margin-bottom: 0;
@@ -233,7 +237,9 @@ input[type="checkbox"]:focus
 /* The error at the top of the form letting the user know there are
    errors that need to be fixed.
 */
-.form-error-alert {
+.form-error-alert,
+.form-errors
+{
     padding: 16px 0px 16px 48px;
     background-image: var(--icon-error);
     background-repeat: no-repeat;
@@ -243,13 +249,17 @@ input[type="checkbox"]:focus
     background-color: var(--bg-error);
     color: var(--text-color);
 }
-.form-error-alert.top {
+.form-error-alert.top,
+.form-errors.top
+{
     margin-top: 0px;
     margin-bottom: 40px;
     border-top: 3.5px solid var(--color-error);
     border-left: 0;
 }
-.form-error-alert.left {
+.form-error-alert.left
+.form-errors.left
+{
     margin-top: var(--space-above-form-control);
     margin-bottom: 0px;
     border-left: 3.5px solid var(--color-error);
@@ -569,6 +579,28 @@ legend + .custom-checkbox-wrapper label
 fieldset .custom-checkbox-wrapper label {
     margin-top: 0;
 }
+
+/* .custom-checkbox-wrapper.special {
+}
+
+.custom-checkbox-wrapper.special label {
+    background-color: var(--bg-navbar);
+    border: 1px solid var(--color-gray);
+    width: 100%;
+    display: block !important;
+
+    background-image: var(--icon-arrow-up-short);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 50px;
+}
+
+.custom-checkbox-wrapper.special .helptext {
+    margin: 0;
+    width: 100%;
+    display: block;
+} */
+
 /*
 ----------------------------------------------------------------------------- */
 
@@ -641,16 +673,21 @@ ul.errorlist {
 }
 
 ul.errorlist.nonfield {
-    list-style: none;
-    padding: 16px 48px;
+    /* list-style: none; */
+    padding: 16px 30px;
     /* margin: 32px 0; */
     margin: 44px 0 0 0;
-    background-image: url('/static/core/icons/alert-circle-white.svg');
+    /* background-image: url('/static/core/icons/alert-circle-white.svg');
     background-repeat: no-repeat;
     background-position: 14px;
-    background-size: 21px;
-    background-color: #cc0000;
-    color: var(--color-light);
+    background-size: 21px; */
+
+    /* background-color: #cc0000; */
+    /* color: var(--color-light); */
+
+    background-color: var(--bg-error);
+    color: var(--text-color);
+    border: 1px solid #e7c0bc;
 }
 
 /* TODO REVIEW */
@@ -686,6 +723,15 @@ ul.errorlist + p > select
 ul.errorlist + p > input:focus,
 ul.errorlist + p > select:focus
 {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 0.2rem var(--color-error-shadow);
+}
+
+ul.errorlist + .inline-form-group input {
+    border: 3px solid var(--color-error);
+}
+
+ul.errorlist + .inline-form-group input:focus {
     border-color: var(--color-error);
     box-shadow: 0 0 0 0.2rem var(--color-error-shadow);
 }
@@ -814,4 +860,18 @@ input[type="range"] {
 .before-addon {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+
+
+
+
+ul.multiselect-checkbox-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0px;
+}
+
+ul.multiselect-checkbox-list label {
+    margin-top: 2px;
 }
