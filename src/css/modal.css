@@ -43,6 +43,14 @@
 
     max-height: 80vh;
     overflow-x: auto;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.is-showing .modal-inner {
+    opacity: 1;
+    visibility: visible;
 }
 
 .dark-theme .modal.is-showing {
